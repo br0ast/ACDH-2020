@@ -1,3 +1,5 @@
+# First analysis (4/3/2020)
+
 Q1: ci limitiamo ai corsi attivi e approvati?
     "active": true,
     "deleted": false,
