@@ -1,6 +1,6 @@
 # First analysis (4/3/2020)
 
-NB Nella mia cartella report trovate un file che contiene come esempio la descrizione del corso DHDK
+NB Nella cartella report trovate un file che contiene come esempio la descrizione del corso DHDK
 
 Q1: ci limitiamo ai corsi attivi e approvati?
     "active": true,
