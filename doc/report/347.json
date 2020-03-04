@@ -1,0 +1,383 @@
+{
+    "id": 347,
+    "active": true,
+    "deleted": false,
+    "deletion_reason_id": null,
+    "approved": true,
+    "created": "2017-05-04T13:48:24+00:00",
+    "updated": "2019-07-22T09:16:10+00:00",
+    "name": "Digital Humanities and Digital Knowledge (DHDK)",
+    "description": "The second cycle degree/Master programme in “Digital Humanities and Digital Knowledge” (DHDK) is a 2-year (120 ECTS credits) free access degree programme with assessment of personal competencies and skills.\r\nThe international degree programme offers a cross-disciplinary curriculum designed to foster close connections between Humanities and Computer Science. It is divided into three macro areas of learning: Computer Science; Literature, Linguistics, History, Culture and Arts in the digital context; Complementary (Management and Organization, Law and Digital Methods, Communication and Social Media).",
+    "country_id": 6,
+    "city_id": 123,
+    "institution_id": 1469,
+    "department": "Dept. of Classical Philology and Italian Studies",
+    "course_parent_type_id": 1,
+    "course_type_id": 2,
+    "language_id": 2,
+    "access_requirements": "To be eligible for admission, candidates must hold requirements specified in the \"Call for Admission\". URL=https://corsi.unibo.it/2cycle/DigitalHumanitiesKnowledge/how-to-enrol",
+    "start_date": "2017-10-01",
+    "duration": null,
+    "course_duration_unit_id": null,
+    "recurring": true,
+    "info_url": "https://corsi.unibo.it/2cycle/DigitalHumanitiesKnowledge",
+    "ects": 120,
+    "contact_mail": "francesca.tomasi@unibo.it",
+    "contact_name": "Francesca Tomasi",
+    "lon": 11.351336,
+    "lat": 44.4966,
+    "tadirah_objects": [
+        {
+            "id": 1,
+            "name": "Artifacts",
+            "description": ""
+        },
+        {
+            "id": 3,
+            "name": "Computers",
+            "description": ""
+        },
+        {
+            "id": 5,
+            "name": "DigitalHumanities",
+            "description": null
+        },
+        {
+            "id": 6,
+            "name": "Data",
+            "description": null
+        },
+        {
+            "id": 7,
+            "name": "File",
+            "description": null
+        },
+        {
+            "id": 8,
+            "name": "Images",
+            "description": null
+        },
+        {
+            "id": 9,
+            "name": "Images(3D)",
+            "description": null
+        },
+        {
+            "id": 10,
+            "name": "Infrastructure",
+            "description": null
+        },
+        {
+            "id": 11,
+            "name": "Interaction",
+            "description": null
+        },
+        {
+            "id": 12,
+            "name": "Language",
+            "description": null
+        },
+        {
+            "id": 13,
+            "name": "Link",
+            "description": null
+        },
+        {
+            "id": 14,
+            "name": "Literature",
+            "description": null
+        },
+        {
+            "id": 15,
+            "name": "Manuscript",
+            "description": null
+        },
+        {
+            "id": 16,
+            "name": "Map",
+            "description": null
+        },
+        {
+            "id": 17,
+            "name": "Metadata",
+            "description": null
+        },
+        {
+            "id": 18,
+            "name": "Multimedia",
+            "description": null
+        },
+        {
+            "id": 19,
+            "name": "Multimodal",
+            "description": null
+        },
+        {
+            "id": 20,
+            "name": "NamedEntities",
+            "description": null
+        },
+        {
+            "id": 21,
+            "name": "Persons",
+            "description": null
+        },
+        {
+            "id": 22,
+            "name": "Projects",
+            "description": null
+        },
+        {
+            "id": 23,
+            "name": "Research",
+            "description": null
+        },
+        {
+            "id": 24,
+            "name": "ResearchProcess",
+            "description": null
+        },
+        {
+            "id": 25,
+            "name": "ResearchResults",
+            "description": null
+        },
+        {
+            "id": 27,
+            "name": "Software",
+            "description": null
+        },
+        {
+            "id": 29,
+            "name": "Standards",
+            "description": null
+        },
+        {
+            "id": 30,
+            "name": "Text",
+            "description": null
+        },
+        {
+            "id": 32,
+            "name": "Tools",
+            "description": null
+        },
+        {
+            "id": 33,
+            "name": "Video",
+            "description": null
+        },
+        {
+            "id": 34,
+            "name": "Visualization",
+            "description": null
+        },
+        {
+            "id": 35,
+            "name": "VREs",
+            "description": null
+        },
+        {
+            "id": 36,
+            "name": "Speech",
+            "description": null
+        }
+    ],
+    "tadirah_techniques": [
+        {
+            "id": 3,
+            "name": "Browsing",
+            "description": null
+        },
+        {
+            "id": 4,
+            "name": "Cluster Analysis ",
+            "description": null
+        },
+        {
+            "id": 5,
+            "name": "Collocation Analysis ",
+            "description": null
+        },
+        {
+            "id": 6,
+            "name": "Commenting",
+            "description": null
+        },
+        {
+            "id": 7,
+            "name": "Concordancing ",
+            "description": null
+        },
+        {
+            "id": 10,
+            "name": "Durable Persistent Media ",
+            "description": null
+        },
+        {
+            "id": 12,
+            "name": "Encoding",
+            "description": null
+        },
+        {
+            "id": 13,
+            "name": "Gamification",
+            "description": null
+        },
+        {
+            "id": 14,
+            "name": "Georeferencing ",
+            "description": null
+        },
+        {
+            "id": 15,
+            "name": "Information Retrieval",
+            "description": null
+        },
+        {
+            "id": 16,
+            "name": "Linked Open Data",
+            "description": null
+        },
+        {
+            "id": 18,
+            "name": "Machine Learning",
+            "description": null
+        },
+        {
+            "id": 19,
+            "name": "Mapping",
+            "description": null
+        },
+        {
+            "id": 21,
+            "name": "Migration ",
+            "description": null
+        },
+        {
+            "id": 22,
+            "name": "Named Entity Recognition ",
+            "description": null
+        },
+        {
+            "id": 23,
+            "name": "Open Archival Information Systems",
+            "description": null
+        },
+        {
+            "id": 24,
+            "name": "Pattern Recognition",
+            "description": null
+        },
+        {
+            "id": 26,
+            "name": "POS-Tagging",
+            "description": null
+        },
+        {
+            "id": 27,
+            "name": "Preservation Metadata ",
+            "description": null
+        },
+        {
+            "id": 32,
+            "name": "Searching",
+            "description": null
+        },
+        {
+            "id": 33,
+            "name": "Sentiment Analysis ",
+            "description": null
+        },
+        {
+            "id": 34,
+            "name": "Sequence Alignment",
+            "description": null
+        },
+        {
+            "id": 35,
+            "name": "Technology Preservation",
+            "description": null
+        },
+        {
+            "id": 36,
+            "name": "Topic Modeling",
+            "description": null
+        },
+        {
+            "id": 37,
+            "name": "Versioning",
+            "description": null
+        },
+        {
+            "id": 38,
+            "name": "Web Crawling ",
+            "description": null
+        },
+        {
+            "id": 41,
+            "name": "Text Mining",
+            "description": null
+        }
+    ],
+    "disciplines": [
+        {
+            "id": 1,
+            "name": "Arts and Cultural Studies"
+        },
+        {
+            "id": 4,
+            "name": "Computer Science"
+        },
+        {
+            "id": 10,
+            "name": "Library Science and Information Science"
+        },
+        {
+            "id": 11,
+            "name": "Linguistics and Language Studies"
+        },
+        {
+            "id": 12,
+            "name": "Literary and Philological Studies"
+        },
+        {
+            "id": 18,
+            "name": "Theory and Methodology of DH"
+        }
+    ],
+    "course_duration_unit": null,
+    "language": {
+        "id": 2,
+        "name": "English"
+    },
+    "course_type": {
+        "id": 2,
+        "course_parent_type_id": 1,
+        "name": "Master Programme"
+    },
+    "course_parent_type": {
+        "id": 1,
+        "name": "Degree"
+    },
+    "institution": {
+        "id": 1469,
+        "city_id": 123,
+        "country_id": 6,
+        "name": "Università di Bologna",
+        "description": "",
+        "url": "http://www.unibo.it/",
+        "created": "2017-04-10T13:41:20+00:00",
+        "updated": "2017-04-10T13:41:20+00:00"
+    },
+    "city": {
+        "id": 123,
+        "country_id": 6,
+        "name": "Bologna"
+    },
+    "country": {
+        "id": 6,
+        "name": "Italy"
+    },
+    "deletion_reason": null
+}
