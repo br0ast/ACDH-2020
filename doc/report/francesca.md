@@ -26,36 +26,36 @@ O2: Una ricerca del tipo https://dhcr.clarin-dariah.eu/api/v1/tadirah_objects/vi
 
 Per ogni corso abbiamo i seguenti dati (gli id sono associati ad ulteriori descrizioni):
 
-- id
-- active
-- deleted
-- deletion_reason_id **+ deletion_reason**
-- approved
-- created
-- updated
-- name
-- description
-- country_id **+ country**
-- city_id + city
-- institution_id **+ institution**
-- department
-- course_parent_type_id **+ course_parent_type**
-- course_type_id **+ course_type**
-- language_id **+ language**
-- access_requirements
-- start_date
-- duration
-- course_duration_unit_id **+ course_duration_unit**
-- recurring
-- info_url
-- ects
-- contact_mail
-- contact_name
-- lon
-- lat
-- tadirah_objects
-- tadirah_techniques
-- disciplines
+- id (number)
+- active (boolean)
+- deleted (boolean)
+- deletion_reason_id (number) **+ deletion_reason** (JSON object)
+- approved (boolean)
+- created (string, di tipo xsd:dateTime)
+- updated (string, di tipo xsd:dateTime)
+- name (string)
+- description (string)
+- country_id (number) **+ country** (JSON object)
+- city_id (number) **+ city** (JSON object)
+- institution_id (number) **+ institution** (JSON object)
+- department (string)
+- course_parent_type_id (number) **+ course_parent_type** (JSON object)
+- course_type_id (number) **+ course_type** (JSON object)
+- language_id (number) **+ language** (JSON object)
+- access_requirements (string)
+- start_date (string, di tipo xsd:date)
+- duration (string)
+- course_duration_unit_id (number) **+ course_duration_unit** (JSON object)
+- recurring (boolean)
+- info_url (string, di tipo http URL)
+- ects (number)
+- contact_mail (string, di tipo mail)
+- contact_name (string)
+- lon (number)
+- lat (number)
+- tadirah_objects (JSON object)
+- tadirah_techniques (JSON object)
+- disciplines (JSON object)
 
 
 
