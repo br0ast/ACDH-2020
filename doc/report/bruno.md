@@ -173,3 +173,13 @@ with open("tadirahjson.json", "w+") as jsonfile:
 The resulting tadirahjson.json can be seen [here](https://github.com/br0ast/ACDH-2020/blob/master/src/data/other/tadirahjson.json)
 
 For each of the tadirah techniques there is the number of occurrences of those techniques in the paper's abstracts, divided by years from 1993 to 2019.
+
+
+**//////////////////
+I dataset delle offerte di lavoro che volevo provare a matchare sono questi:
+https://data.world/promptcloud/50000-job-board-records-from-reed-uk
+https://www.kaggle.com/PromptCloudHQ/usbased-jobs-from-dicecom
+https://www.kaggle.com/PromptCloudHQ/us-jobs-on-monstercom
+https://data.world/promptcloud/30000-job-postings-from-seek-australia
+Circa 122000 annunci di offerte di lavoro e dovrebbero avere tutti (?) una descrizione con le skill richieste, se volete darci un occhio
+/////////////////**
