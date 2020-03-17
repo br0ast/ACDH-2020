@@ -59,3 +59,117 @@ with open('dh_journals.csv', 'r') as csvfile:
       dumpmemyjson(a,b)
 ```
 They are in [this folder](https://github.com/br0ast/ACDH-2020/tree/master/src/data/crossref). The files are named with their corresponding journal. In case there are more than 1000 publication of that journal the publications are divided into 2 json files (with an addition of " part2" to the second one).
+
+**17/03/2020**
+
+I have downloaded the paper dataset from [arxiv_archive](https://github.com/staeiou/arxiv_archive/tree/master/processed_data/20200101/per_year), then I have tried to match
+every technique in the tadirah techniques 
+``` python
+['Information Retrieval',
+ 'Encoding',
+ 'Text Mining',
+ 'Linked Open Data',
+ 'Searching',
+ 'Mapping',
+ 'Georeferencing',
+ 'Preservation Metadata',
+ 'Scanning',
+ 'Topic Modeling',
+ 'Named Entity Recognition',
+ 'Machine Learning',
+ 'Browsing',
+ 'POS-Tagging',
+ 'Concordancing',
+ 'Brainstorming',
+ 'Pattern Recognition',
+ 'Cluster Analysis',
+ 'Collocation Analysis',
+ 'Open Archival Information Systems',
+ 'Photography',
+ 'Versioning',
+ 'Gamification',
+ 'Web Crawling',
+ 'Commenting',
+ 'Distance Measures',
+ 'Sentiment Analysis',
+ 'Technology Preservation',
+ 'Durable Persistent Media',
+ 'Debugging',
+ 'Principal Component Analysis',
+ 'Sequence Alignment',
+ 'Emulation',
+ 'Replication',
+ 'Bit Stream Preservation',
+ 'Migration']
+ ```
+ With the abstract of each paper. Because of the year structure of the database (each paper with its metadata and abstract is divided into year folders from 1993 to 2019) I have created a json with the matching for every technique in every year.
+ 
+ The code used to create the various matching is the following:
+ 
+  ``` python
+  
+  tad_techlist = ['Information Retrieval',
+ 'Encoding',
+ 'Text Mining',
+ 'Linked Open Data',
+ 'Searching',
+ 'Mapping',
+ 'Georeferencing',
+ 'Preservation Metadata',
+ 'Scanning',
+ 'Topic Modeling',
+ 'Named Entity Recognition',
+ 'Machine Learning',
+ 'Browsing',
+ 'POS-Tagging',
+ 'Concordancing',
+ 'Brainstorming',
+ 'Pattern Recognition',
+ 'Cluster Analysis',
+ 'Collocation Analysis',
+ 'Open Archival Information Systems',
+ 'Photography',
+ 'Versioning',
+ 'Gamification',
+ 'Web Crawling',
+ 'Commenting',
+ 'Distance Measures',
+ 'Sentiment Analysis',
+ 'Technology Preservation',
+ 'Durable Persistent Media',
+ 'Debugging',
+ 'Principal Component Analysis',
+ 'Sequence Alignment',
+ 'Emulation',
+ 'Replication',
+ 'Bit Stream Preservation',
+ 'Migration']
+ 
+ finaldict = {}
+for tag in tad_techlist:
+  finaldict[tag]={1993:0, 1994:0,1995:0,1996:0,1997:0,1998:0,1999:0,2000:0,2001:0,2002:0,2003:0,2003:0,2004:0,2005:0,2006:0,2007:0,2008:0,2009:0,2010:0,2011:0,
+  2012:0,2013:0,2014:0,2015:0,2016:0,2017:0,2018:0,2019:0,2020:0}
+  
+import csv
+
+path = '/content/drive/My Drive/years/' #insert your path here
+alpha = 1993
+while alpha <2020:
+  filename = path + str(alpha) + ".tsv"
+  with open (filename, "r") as tsvfile:
+    reader = csv.DictReader(tsvfile, delimiter="\t")
+    for row in reader:
+      text = row["abstract"].lower()
+      for key in finaldict:
+        if key.lower() in text:
+          finaldict[key][alpha] += 1
+  alpha +=1
+
+import json
+with open("tadirahjson.json", "w+") as jsonfile:
+  json.dump(finaldict,jsonfile)
+```
+
+The resulting tadirahjson.json can be seen [here](https://github.com/br0ast/ACDH-2020/blob/master/src/data/other/tadirahjson.json)
+
+For each of the tadirah techniques there is the number of occurrences of those techniques in the paper's abstracts, divided by years from 1993 to 2019.
