@@ -62,7 +62,7 @@ They are in [this folder](https://github.com/br0ast/ACDH-2020/tree/master/src/da
 
 **17/03/2020**
 
-Added a [**datesofarticles.csv** file](https://github.com/br0ast/ACDH-2020/tree/master/src/data/crossref/datesofarticles.csv). It contains the number of articles per journal divided by publication (pre and post 2010) to have an idea on how much "up-to-date" are the publications in these kind of journals
+Added a [**datesofarticles.csv** file](https://github.com/br0ast/ACDH-2020/tree/master/src/data/crossref/datesofarticles.csv). It contains the number of articles per journal divided by publication (pre and post 2010) to have an idea on how much "up-to-date" are the publications in these kind of journals (Gianmarco's List)
 
 I have downloaded the paper dataset from [arxiv_archive](https://github.com/staeiou/arxiv_archive/tree/master/processed_data/20200101/per_year), then I have tried to match
 every technique in the tadirah techniques 
