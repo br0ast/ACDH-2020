@@ -7,7 +7,7 @@ Whether at BA, MA or PhD level, choosing the right Digital Humanities programme 
 
 In particular, we selected a list of primarily DH-oriented journals (cf. “Research methodology” for the selection criteria). Then, we matched the journal articles with the institutions of the registry to be able to give potential students/users of the registry information about the research interests and publication stats of the DH staff of the institution; we also reconstructed the network of collaborations among the institutions on the basis of DH publications co-authored by scholars from different institutions of the registry.
 
-We also explored the disciplines and the techniques of the courses a bit further. To do so, we looked for mentions of the disciplines and techniques in DH journal articles (we limited our search to abstracts) in order to give the users insight on the number and quality of publications related to specific disciplines and techniques. At the same time, we looked for mentions of the disciplines and techniques into job offers from data.world to let users know which skills are most sought after by potential employers.
+We also explored the disciplines and the techniques of the courses a bit further. To do so, we looked for mentions of the disciplines and techniques in DH journal articles (we limited our search to abstracts) in order to provide users with insight on the number and quality of publications related to each specific discipline and technique. At the same time, we looked for mentions of the disciplines and techniques in job offers from data.world to let users know what skills are most sought after by potential employers.
 
 ### Research methodology
 
