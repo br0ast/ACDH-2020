@@ -9,7 +9,7 @@ This project sets out to enhance the DH course registry with new data and visual
 
 **RQ1** How many Digital Humanities articles are affiliated to the institutions of the registry? Were there any collaborations, i.e. co-authored DH articles, between the institutions?
 
-**RQ2** What kind of Digital Humanities articles do the institutions publish? To what extent are the articles related to the disiciplines and techniques taught in the DH courses offered?
+**RQ2** What kind of Digital Humanities articles do the institutions publish? To what extent are the articles related to the disciplines and techniques taught in the offered DH courses?
 
 
 
