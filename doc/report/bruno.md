@@ -185,3 +185,77 @@ https://www.kaggle.com/PromptCloudHQ/us-jobs-on-monstercom
 https://data.world/promptcloud/30000-job-postings-from-seek-australia
 Circa 122000 annunci di offerte di lavoro e dovrebbero avere tutti (?) una descrizione con le skill richieste, se volete darci un occhio
 /////////////////**
+
+**19/03/2020**
+
+I have matched the tadirah techniques with the keywords of extracted from microsoft academics, the script for this match can be seen below and the results are [here](https://github.com/br0ast/ACDH-2020/blob/master/src/data/mag/tadirahdhmatch.json)
+
+```python
+tad_techlist = ['Information Retrieval',
+ 'Encoding',
+ 'Text Mining',
+ 'Linked Open Data',
+ 'Searching',
+ 'Mapping',
+ 'Georeferencing',
+ 'Preservation Metadata',
+ 'Scanning',
+ 'Topic Modeling',
+ 'Named Entity Recognition',
+ 'Machine Learning',
+ 'Browsing',
+ 'POS-Tagging',
+ 'Concordancing',
+ 'Brainstorming',
+ 'Pattern Recognition',
+ 'Cluster Analysis',
+ 'Collocation Analysis',
+ 'Open Archival Information Systems',
+ 'Photography',
+ 'Versioning',
+ 'Gamification',
+ 'Web Crawling',
+ 'Commenting',
+ 'Distance Measures',
+ 'Sentiment Analysis',
+ 'Technology Preservation',
+ 'Durable Persistent Media',
+ 'Debugging',
+ 'Principal Component Analysis',
+ 'Sequence Alignment',
+ 'Emulation',
+ 'Replication',
+ 'Bit Stream Preservation',
+ 'Migration']
+
+finaldict = {}
+for tag in tad_techlist:
+  finaldict[tag]={2002:{"number":0,"doilist":[]},2003:{"number":0,"doilist":[]},2003:{"number":0,"doilist":[]},2004:{"number":0,"doilist":[]},2005:{"number":0,"doilist":[]},2006:{"number":0,"doilist":[]},2007:{"number":0,"doilist":[]},2008:{"number":0,"doilist":[]},2009:{"number":0,"doilist":[]},2010:{"number":0,"doilist":[]},2011:{"number":0,"doilist":[]},2012:{"number":0,"doilist":[]},2013:{"number":0,"doilist":[]},2014:{"number":0,"doilist":[]},2015:{"number":0,"doilist":[]},2016:{"number":0,"doilist":[]},2017:{"number":0,"doilist":[]},2018:{"number":0,"doilist":[]},2019:{"number":0,"doilist":[]},2020:{"number":0,"doilist":[]}}
+
+
+import csv
+import os
+
+directory = '/content/drive/My Drive/ivancsv/' #place the directory of the downloaded datasets
+for filename in os.listdir(directory):
+    if filename.endswith(".csv"):
+      with open(directory + filename, "r") as csvfile:
+        csvz = csv.DictReader(csvfile)
+        print("reading " + filename)
+        for row in csvz:
+          try:
+            year = doidate[row["DOI"]]
+            for item in finaldict:
+              if row["F.FN"]:
+                keywords = row["F.FN"].lower().replace("-", " ")
+                if item.lower().replace("-"," ") in keywords:
+                  finaldict[item][year]["number"]+=1
+                  finaldict[item][year]["doilist"].append(row["DOI"])
+                  print("Found tadirah term " + item + " in article " + row["DOI"])
+          except:KeyError
+  
+  with open("tadirahdhmatch.json", "w+") as jsonoutput:
+  json.dump(finaldict, jsonoutput)
+
+```
+
