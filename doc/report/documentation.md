@@ -3,7 +3,17 @@
 
 ### Introduction
 
-Whether at BA, MA or PhD level, choosing the right Digital Humanities programme is not an easy task. The Digital Humanities course registry offers an ongoing list of institutions offering such programmes, besides single courses and other types of training events such as summer schools. Starting from the registry, our team decided to reuse information from other open datasets such as CrossRef and data.world in order to be able to offer not only new visualization options but also a richer insight into the orientation and characteristics of the DH programmes that are listed in the registry.
+Whether at BA, MA or PhD level, choosing the right Digital Humanities programme is not an easy task. The Digital Humanities course registry features an ongoing list of institutions offering such programmes, besides single courses and other types of training events such as summer schools. The registry contains up-to-date information about the disciplines and techniques taught within each DH course, but it does not take advantage of ever growing external dataset such as CrossRef, which contains insightful metadata about global scholarly research including DH.
+
+This project sets out to enhance the DH course registry with new data and visualizations. In particular, it integrates data from CrossRef to make it possible for users of the registry to receive answers to the following questions:
+
+**RQ1** How many Digital Humanities articles are affiliated to the institutions of the registry? Were there any collaborations, i.e. co-authored DH articles, between the institutions?
+
+**RQ2** What kind of Digital Humanities articles do the institutions publish? To what extent are the articles related to the disiciplines and techniques taught in the DH courses offered?
+
+
+
+
 
 In particular, we selected a list of primarily DH-oriented journals (cf. “Research methodology” for the selection criteria). Then, we matched the journal articles with the institutions of the registry to be able to give potential students/users of the registry information about the research interests and publication stats of the DH staff of the institution; we also reconstructed the network of collaborations among the institutions on the basis of DH publications co-authored by scholars from different institutions of the registry.
 
