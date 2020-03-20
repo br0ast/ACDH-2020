@@ -59,7 +59,7 @@ Publications are only included in the analysis if they belong to journals which 
 
 The first step in this analysis was to fetch relevant data from [Microsoft Academic](https://academic.microsoft.com/home) through their Microsoft Knowledge API. From this dataset, we fetched a CSV file for each journal above listing all articles published between 1993 and 2019 (available in [this folder](https://github.com/br0ast/ACDH-2020/tree/master/src/data/mag)). For each article we gathered data about: the affiliation, the DOI, and the keywords. For each article, we also collected the title and year of publication from Crossref through the [Crossref REST API](https://www.crossref.org/services/metadata-delivery/rest-api/).
 
-In order to be able to anwswer **RQ1**, we matched each article with its affiliated institution in the DH course registry and generated an enriched dataset providing the number of DH publications for each institution and the number of collaborations (in terms of co-authored articles) with other institutions of the registry.
+In order to be able to anwswer **RQ1**, we matched each article with its affiliated institution in the DH course registry and generated a new enriched dataset for the DH course registry which also provides the number of DH publications for each institution and the number of collaborations (in terms of co-authored articles) with other institutions of the registry.
 
 ### Research outcome
 	#### User-friendly description of the tool / vizs
