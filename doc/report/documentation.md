@@ -61,6 +61,8 @@ The first step in this analysis was to fetch relevant data from [Microsoft Acade
 
 In order to be able to anwswer **RQ1**, we matched each article with its affiliated institution in the DH course registry and generated a new enriched dataset for the DH course registry which also provides the number of DH publications for each institution and the number of collaborations (in terms of co-authored articles) with other institutions of the registry (see "Research outcome" below for information on how we decided to visualize these data).
 
+For **RQ2**, 
+
 ### Research outcome
 	#### User-friendly description of the tool / vizs
 	#### How to run the tool
