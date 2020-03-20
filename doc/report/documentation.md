@@ -3,9 +3,9 @@
 
 ### Introduction
 
-Whether at BA, MA or PhD level, choosing the right Digital Humanities programme is not an easy task. The Digital Humanities course registry features an ongoing list of institutions offering such programmes, besides single courses and other types of training events such as summer schools. The registry contains up-to-date information about the disciplines and techniques taught within each DH course, but it does not take advantage of ever growing external dataset such as CrossRef, which contains insightful metadata about global scholarly research, including DH.
+Whether at BA, MA or PhD level, choosing the right Digital Humanities programme is not an easy task. The Digital Humanities course registry features an ongoing list of institutions offering such programmes, besides single courses and other types of training events such as summer schools. The registry contains up-to-date information about the disciplines and techniques taught within each DH course, but it does not take advantage of ever growing external dataset such as [Crossref](https://www.crossref.org/), which contains insightful metadata about global scholarly research, including DH.
 
-This project sets out to enhance the DH course registry with new data and visualizations. In particular, it integrates data from CrossRef to make it possible for the registry to answers the following questions through additional visualizations:
+This project sets out to enhance the DH course registry with new data and visualizations. In particular, it integrates data from Crossref to make it possible for the registry to answers the following questions through additional visualizations:
 
 **RQ1** How many Digital Humanities articles are affiliated to the institutions of the registry? Were there any collaborations, i.e. co-authored DH articles, between the institutions?
 
@@ -56,6 +56,8 @@ Publications are only included in the analysis if they belong to journals which 
 - *INTERNATIONAL JOURNAL OF DIGITAL CURATION*
 - *The Journal of Interactive Technology and Pedagogy*
 - *Code4Lib Journal*
+
+The first step in this analysis was to fetch relevant data through the [Crossref REST API](https://www.crossref.org/services/metadata-delivery/rest-api/). In particular, we generated one CSV file for each journal (available in [this folder](https://github.com/br0ast/ACDH-2020/tree/master/src/data/mag)). Each file contains the list of articles published between 1993 and 2019. For each article, the file provides: affiliation, DOI, and keywords. 
 
 ### Research outcome
 	#### User-friendly description of the tool / vizs
