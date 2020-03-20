@@ -15,9 +15,47 @@ Our aim is to provide additional support for students resorting to the DH course
 
 ### Research methodology
 
-We selected a list of primarily DH-oriented journals (cf. “Research methodology” for the selection criteria). Then, we matched the journal articles with the institutions of the registry to be able to give potential students/users of the registry information about the research interests and publication stats of the DH staff of the institution; we also reconstructed the network of collaborations among the institutions on the basis of DH publications co-authored by scholars from different institutions of the registry.
+Publications are only included in the analysis if they belong to journals which are either exclusively or significantly DH-oriented. We based our selection of the journals on the classification proposed in Spinaci, Colavizza and Peroni (2019). The journals included are:
 
-We also explored the disciplines and the techniques of the courses a bit further. To do so, we looked for mentions of the disciplines and techniques in DH journal articles (we limited our search to abstracts) in order to provide users with insight on the number and quality of publications related to each specific discipline and technique. At the same time, we looked for mentions of the disciplines and techniques in job offers from data.world to let users know what skills are most sought after by potential employers.
+Journals that exclusively publish DH articles (19 in total):
+- *Umanistica Digitale*
+- *Frontiers in Digital Humanities*
+- *Digital Scholarship in the Humanities (DSH)*
+- *Digital Humanities Quarterly (DHQ)*
+- *Digital Studies / Le champ numérique*
+- *Journal of Digital Humanities*
+- *Journal of Cultural Analytics*
+- *Journal of Digital Archives and Digital Humanities*
+- *Digitális Bölcsészet / Digital Humanities*
+- *Revista de humanidades digitales*
+- *Journal of the Japanese Association for Digital Humanities*
+- *Journal of Data Mining and Digital Humanities*
+- *International Journal of Digital Humanities*
+- *Journal on Computing and Cultural Heritage (JOCCH)*
+- *Literary and Linguistics Computing*
+- *Journal of the Text Encoding Initiative*
+- *Computers and the Humanities*
+- *International Journal of Humanities and Arts Computing*
+- *Digital Medievalist*
+
+Journals that publish a significant number of DH articles (17 in total):
+- *Digital Library Perspectives*
+- *Journal of Library Metadata*
+- *Journal of Quantitative Linguistics*
+- *Language Resources and Evaluation*
+- *Virtual Archaeology Review*
+- *D-Lib Magazine*
+- *Computational Linguistics*
+- *AI & SOCIETY*
+- *International Journal on Digital Libraries*
+- *ENTHYMEMA*
+- *Italiano LinguaDue*
+- *Lingue e culture dei media*
+- *JLIS*
+- *Doctor virtualis*
+- *INTERNATIONAL JOURNAL OF DIGITAL CURATION*
+- *The Journal of Interactive Technology and Pedagogy*
+- *Code4Lib Journal*
 
 ### Research outcome
 	#### User-friendly description of the tool / vizs
