@@ -17,7 +17,7 @@ Our aim is to provide additional support for students resorting to the DH course
 
 Publications are only included in the analysis if they belong to journals which are either exclusively or significantly DH-oriented. We based our selection of the journals on the classification proposed in Spinaci, Colavizza and Peroni (2019). The journals included are:
 
-Journals that exclusively publish DH articles (19 in total):
+**Journals that exclusively publish DH articles (19 in total)**
 - *Umanistica Digitale*
 - *Frontiers in Digital Humanities*
 - *Digital Scholarship in the Humanities (DSH)*
@@ -38,7 +38,7 @@ Journals that exclusively publish DH articles (19 in total):
 - *International Journal of Humanities and Arts Computing*
 - *Digital Medievalist*
 
-Journals that publish a significant number of DH articles (17 in total):
+**Journals that publish a significant number of DH articles (17 in total)**
 - *Digital Library Perspectives*
 - *Journal of Library Metadata*
 - *Journal of Quantitative Linguistics*
