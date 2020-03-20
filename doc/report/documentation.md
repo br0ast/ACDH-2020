@@ -59,6 +59,8 @@ Publications are only included in the analysis if they belong to journals which 
 
 The first step in this analysis was to fetch relevant data from [Microsoft Academic](https://academic.microsoft.com/home) through their Microsoft Knowledge API. From this dataset, we fetched a CSV file for each journal above listing all articles published between 1993 and 2019 (available in [this folder](https://github.com/br0ast/ACDH-2020/tree/master/src/data/mag)). For each article we gathered data about: the affiliation, the DOI, and the keywords.
 
+We also collected the titles and the year of publication for each article from Crossref through the [Crossref REST API](https://www.crossref.org/services/metadata-delivery/rest-api/).
+
 ### Research outcome
 	#### User-friendly description of the tool / vizs
 	#### How to run the tool
