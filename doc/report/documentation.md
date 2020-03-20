@@ -11,7 +11,7 @@ This project sets out to enhance the DH course registry with new data and visual
 
 **RQ2** What kind of Digital Humanities articles do the institutions publish? To what extent are the articles related to the disciplines and techniques taught in the offered DH courses?
 
-Our aim is to provide additional support for students resorting to the DH course registry to choose the Digital Humanities programme that's right for them. Getting a taste of the type of DH research carried out by the institutions will help users choose the course which better aligns with their objectives and expectations. Someone searching for a PhD programme, for example, could use the extra data to identify the institutions that publish the most papers on the discipline(s) of her interest.
+Our aim is to provide additional support for students resorting to the DH course registry to choose the Digital Humanities programme that's right for them. Getting a taste of the type of DH research carried out by the institutions will help users choose the course that better aligns with their objectives and expectations. Someone searching for a PhD programme, for example, could use the extra data to identify the institutions that publish the most papers on the discipline(s) of her interest.
 
 ### Research methodology
 
