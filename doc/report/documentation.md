@@ -43,7 +43,11 @@ Publications are only included in the analysis if they belong to journals which 
 - *International Journal on Digital Libraries*
 - *International Journal of Digital Curation*
 
-The first step in this analysis was to fetch relevant data from [Microsoft Academic](https://academic.microsoft.com/home) through their Microsoft Knowledge API. From this dataset, for each of the journals above, we fetched a CSV file listing all articles published between 1993 and 2019 (available in [this folder](https://github.com/br0ast/ACDH-2020/tree/master/src/data/mag)). For each article we gathered data about: the affiliation, the DOI, and the keywords. For each article, we also collected the title and year of publication from Crossref through the [Crossref REST API](https://www.crossref.org/services/metadata-delivery/rest-api/).
+The first steps in this analysis were to fetch relevant data from [Crossref](https://www.crossref.org/) and [Microsoft Academic](https://academic.microsoft.com/home) (both services offer an API), which include articles published after 2002 until 2020. For each journal, using the ISSN number as a reference, we created two distinct files, one for each dataset used ([the folder 'crossref'](https://github.com/br0ast/ACDH-2020/tree/master/src/data/crossref) contains all data fetched from Crossref, while [the folder 'mag'](https://github.com/br0ast/ACDH-2020/tree/master/src/data/mag) contains the data from Microsoft Academic). For each article within the CSVs, we collected several metadata such as title, year of publication, affiliation, DOI, and keywords (for the complete list of data see Table 1). The use of Microsoft Academic became necessary as we noted that keywords and affiliations were not always present in Crossref.
+
+<!---
+Table1 
+-->
 
 In order to be able to answer **RQ1**, we matched each article with its affiliated institution in the DH course registry and generated a new enriched dataset for the DH course registry which also provides the number of DH publications for each institution and the number of collaborations (in terms of co-authored articles) with other institutions of the registry.
 
