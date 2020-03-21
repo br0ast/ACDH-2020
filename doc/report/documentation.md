@@ -57,11 +57,16 @@ Publications are only included in the analysis if they belong to journals which 
 - *The Journal of Interactive Technology and Pedagogy*
 - *Code4Lib Journal*
 
-The first step in this analysis was to fetch relevant data from [Microsoft Academic](https://academic.microsoft.com/home) through their Microsoft Knowledge API. From this dataset, we fetched a CSV file for each journal above listing all articles published between 1993 and 2019 (available in [this folder](https://github.com/br0ast/ACDH-2020/tree/master/src/data/mag)). For each article we gathered data about: the affiliation, the DOI, and the keywords. For each article, we also collected the title and year of publication from Crossref through the [Crossref REST API](https://www.crossref.org/services/metadata-delivery/rest-api/).
+The first step in this analysis was to fetch relevant data from [Microsoft Academic](https://academic.microsoft.com/home) through their Microsoft Knowledge API. From this dataset, for each of the journals above, we fetched a CSV file listing all articles published between 1993 and 2019 (available in [this folder](https://github.com/br0ast/ACDH-2020/tree/master/src/data/mag)). For each article we gathered data about: the affiliation, the DOI, and the keywords. For each article, we also collected the title and year of publication from Crossref through the [Crossref REST API](https://www.crossref.org/services/metadata-delivery/rest-api/).
 
-In order to be able to anwswer **RQ1**, we matched each article with its affiliated institution in the DH course registry and generated a new enriched dataset for the DH course registry which also provides the number of DH publications for each institution and the number of collaborations (in terms of co-authored articles) with other institutions of the registry (see "Research outcome" below for information on how we decided to visualize these data).
+In order to be able to anwswer **RQ1**, we matched each article with its affiliated institution in the DH course registry and generated a new enriched dataset for the DH course registry which also provides the number of DH publications for each institution and the number of collaborations (in terms of co-authored articles) with other institutions of the registry.
 
-For **RQ2**, 
+For **RQ2**, we reused the data from Microsoft Academic and Crossref to match the disciplines as well as the techniques of each DH course with all related articles. In particular, an article is associated with a discipline or technique when the discipline or technique appears among the article keywords.
+
+<!---
+Check, are we going to create a single script (to be launched once a week) calling any other script?
+-->
+The script used to generate the enriched dataset is available [here](https://github.com/br0ast/ACDH-2020/tree/master/src/script). This script is ideally meant to be run at least once a month so to maintain the DH course registry up-to-date with new DH publications. The last updated date and time will be displayed to ensure users are aware of the data freshness. 
 
 ### Research outcome
 	#### User-friendly description of the tool / vizs
