@@ -69,7 +69,13 @@ Check, are we going to create a single script (to be launched once a week) calli
 The script used to generate the enriched dataset is available [here](https://github.com/br0ast/ACDH-2020/tree/master/src/script). This script is ideally meant to be run at least once a month so to maintain the DH course registry up-to-date with new DH publications. The last updated date and time will be displayed to ensure users are aware of the data freshness. 
 
 ### Research outcome
-	#### User-friendly description of the tool / vizs
-	#### How to run the tool
+
+#### User-friendly description of the tool / vizs
+#### How to run the tool
 	
 ### Limitations and suggestions for future work
+
+### References
+
+Spinaci, Gianmarco, Colavizza, Giovanni, & Peroni, Silvio. (2019). List of Digital Humanities journals (Version 0.1.0) [Data set]. Zenodo. http://doi.org/10.5281/zenodo.3406564
+
