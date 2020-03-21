@@ -3,7 +3,7 @@
 
 ### Introduction
 
-Whether at BA, MA or PhD level, choosing the right Digital Humanities programme is not an easy task. The Digital Humanities course registry features an ongoing list of institutions offering such programmes, besides single courses and other types of training events such as summer schools. The registry contains up-to-date information about the disciplines and techniques taught within each DH course, but it does not take advantage of ever growing external dataset such as [Crossref](https://www.crossref.org/), which contains insightful metadata about global scholarly research, including DH.
+Whether at BA, MA or PhD level, choosing the right Digital Humanities programme is not an easy task. The Digital Humanities course registry features an ongoing list of institutions offering such programmes, besides single courses and other types of training events such as summer schools. The registry contains up-to-date information about the disciplines and techniques taught within each DH course, but it does not take advantage of ever growing external dataset such as Crossref, which contains insightful metadata about global scholarly research, including DH.
 
 This project sets out to enhance the DH course registry with new data and visualizations. In particular, it integrates data from Crossref to make it possible for the registry to answers the following questions through additional visualizations:
 
