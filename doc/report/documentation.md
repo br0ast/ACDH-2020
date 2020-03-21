@@ -15,31 +15,24 @@ Our aim is to provide additional support for students resorting to the DH course
 
 ### Research methodology
 
-Publications are only included in the analysis if they belong to journals which are either exclusively or significantly DH-oriented. We based our selection of the journals on the classification proposed in Spinaci, Colavizza and Peroni (2019). The journals included are:
+Publications are only included in the analysis if they belong to journals which are either exclusively or significantly DH-oriented. We based our selection of the journals on the classification proposed in Spinaci, Colavizza and Peroni (2019). We were able to collect data about 23 of the 36 journals of the classification (the remaining journals are, unfortunately, not yet part of Crossref). The journals included are:
 
-**Journals that exclusively publish DH articles (19 in total)**
-- *Umanistica Digitale*
+**Journals that exclusively publish DH articles (14 in total, out of 19)**
 - *Frontiers in Digital Humanities*
-- *Digital Scholarship in the Humanities (DSH)*
-- *Digital Humanities Quarterly (DHQ)*
+- *Literary and Linguistics Computing* / *Digital Scholarship in the Humanities (DSH)*
 - *Digital Studies / Le champ numérique*
-- *Journal of Digital Humanities*
-- *Journal of Cultural Analytics*
-- *Journal of Digital Archives and Digital Humanities*
+- *Journal of Cultural Analytics* 
 - *Digitális Bölcsészet / Digital Humanities*
-- *Revista de humanidades digitales*
+- *Revista de humanidades digitales* 
 - *Journal of the Japanese Association for Digital Humanities*
-- *Journal of Data Mining and Digital Humanities*
 - *International Journal of Digital Humanities*
-- *Journal on Computing and Cultural Heritage (JOCCH)*
-- *Literary and Linguistics Computing*
+- *Journal on Computing and Cultural Heritage (JOCCH)* 
 - *Journal of the Text Encoding Initiative*
 - *Computers and the Humanities*
 - *International Journal of Humanities and Arts Computing*
 - *Digital Medievalist*
 
-**Journals that publish a significant number of DH articles (17 in total)**
-- *Digital Library Perspectives*
+**Journals that publish a significant number of DH articles (9  in total, out of 17)**
 - *Journal of Library Metadata*
 - *Journal of Quantitative Linguistics*
 - *Language Resources and Evaluation*
@@ -48,14 +41,7 @@ Publications are only included in the analysis if they belong to journals which 
 - *Computational Linguistics*
 - *AI & SOCIETY*
 - *International Journal on Digital Libraries*
-- *ENTHYMEMA*
-- *Italiano LinguaDue*
-- *Lingue e culture dei media*
-- *JLIS*
-- *Doctor virtualis*
-- *INTERNATIONAL JOURNAL OF DIGITAL CURATION*
-- *The Journal of Interactive Technology and Pedagogy*
-- *Code4Lib Journal*
+- *International Journal of Digital Curation*
 
 The first step in this analysis was to fetch relevant data from [Microsoft Academic](https://academic.microsoft.com/home) through their Microsoft Knowledge API. From this dataset, for each of the journals above, we fetched a CSV file listing all articles published between 1993 and 2019 (available in [this folder](https://github.com/br0ast/ACDH-2020/tree/master/src/data/mag)). For each article we gathered data about: the affiliation, the DOI, and the keywords. For each article, we also collected the title and year of publication from Crossref through the [Crossref REST API](https://www.crossref.org/services/metadata-delivery/rest-api/).
 
