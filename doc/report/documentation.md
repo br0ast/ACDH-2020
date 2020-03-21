@@ -66,7 +66,7 @@ For **RQ2**, we reused the data from Microsoft Academic and Crossref to match th
 <!---
 Check, are we going to create a single script (to be launched once a week) calling any other script?
 -->
-The script used to generate the enriched dataset is available [here](https://github.com/br0ast/ACDH-2020/tree/master/src/script). This script is ideally meant to be run at least once a month so to maintain the DH course registry up-to-date with new DH publications. The last updated date and time will be displayed to ensure users are aware of the data freshness. 
+The script used to generate the enriched dataset is available [here](https://github.com/br0ast/ACDH-2020/tree/master/src/script). This script is ideally meant to be run at least once a month so to maintain the DH course registry up-to-date with new DH publications. The last updated date and time will be displayed to ensure users are aware of the degree of freshness of the data. 
 
 ### Research outcome
 
