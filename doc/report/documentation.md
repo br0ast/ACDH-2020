@@ -45,12 +45,7 @@ Publications are only included in the analysis if they belong to journals which 
 
 The first steps in this analysis were to fetch relevant data from [Crossref](https://www.crossref.org/) and [Microsoft Academic](https://academic.microsoft.com/home) (both services offer an API), which include articles published after 2002 until 2020. For each journal, using the ISSN number as a reference, we created two distinct files, one for each dataset used ([the folder 'crossref'](https://github.com/br0ast/ACDH-2020/tree/master/src/data/crossref) contains all the data fetched from Crossref, while [the folder 'mag'](https://github.com/br0ast/ACDH-2020/tree/master/src/data/mag) contains the data from Microsoft Academic). For each article, we collected several metadata such as title, year of publication, affiliation, DOI, and keywords (for the complete list of data see Table 1 and Table 2). The use of Microsoft Academic became necessary as we noted that keywords and affiliations were not always present in Crossref.
 
-<!---
-Table 1 
--->
-
 **Table 1. Metadata for each DH article obtained from Microsoft Academic**
-
 | Data | Example (CSV) |
 |--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | DOI | 10.1093/llc/fqt054 |
@@ -58,6 +53,7 @@ Table 1
 | keywords | the internet;; sociology;; scholarship;; parliament;; objective evidence;; irish;; humanities;; digital humanities;; digital content;; citation |
 | abstract | substantial;; corpus;; digital;; materials;; now;; scholarship;; across;; disciplines;; objective;; evidence;; impact;; value;; robust;; assessment;; [...] |
 
+**Table 2. Metadata for each DH article obtained from Crossref**
 <!---
 Table 2
 -->
