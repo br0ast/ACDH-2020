@@ -59,7 +59,7 @@ Publications are only included in the analysis if they belong to journals which 
 
 The first step in this analysis was to fetch relevant data from [Microsoft Academic](https://academic.microsoft.com/home) through their Microsoft Knowledge API. From this dataset, for each of the journals above, we fetched a CSV file listing all articles published between 1993 and 2019 (available in [this folder](https://github.com/br0ast/ACDH-2020/tree/master/src/data/mag)). For each article we gathered data about: the affiliation, the DOI, and the keywords. For each article, we also collected the title and year of publication from Crossref through the [Crossref REST API](https://www.crossref.org/services/metadata-delivery/rest-api/).
 
-In order to be able to anwswer **RQ1**, we matched each article with its affiliated institution in the DH course registry and generated a new enriched dataset for the DH course registry which also provides the number of DH publications for each institution and the number of collaborations (in terms of co-authored articles) with other institutions of the registry.
+In order to be able to answer **RQ1**, we matched each article with its affiliated institution in the DH course registry and generated a new enriched dataset for the DH course registry which also provides the number of DH publications for each institution and the number of collaborations (in terms of co-authored articles) with other institutions of the registry.
 
 For **RQ2**, we reused the data from Microsoft Academic and Crossref to match the disciplines as well as the techniques of each DH course with all related articles. In particular, an article is associated with a discipline or technique when the discipline or technique appears among the article keywords.
 
