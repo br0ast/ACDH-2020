@@ -259,3 +259,6 @@ for filename in os.listdir(directory):
 
 ```
 
+**21/03/2020**
+
+Updated the script page with [my scripts reorganized and commented](https://github.com/br0ast/ACDH-2020/blob/master/src/script/ACDH_Bruno_Scripts.ipynb)
