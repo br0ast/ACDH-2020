@@ -57,7 +57,7 @@ The first steps in this analysis were to fetch relevant data from [Crossref](htt
 | abstract | substantial;; corpus;; digital;; materials;; now;; scholarship;; across;; disciplines;; objective;; evidence;; impact;; value;; robust;; assessment;; [...] |
 
 **Table 2. Metadata reused from Crossref for each DH article**
-| Crossref | Example (JSON) |
+| Data | Example (JSON) |
 |---------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | DOI | "DOI": "10.1093/llc/fqt054" |
 | date of publication | "created": { "date-parts": [ [ 2013, 9, 12] ], "date-time": "2013-09-12T03:56:45Z",,"timestamp": 1378958205000 } |
