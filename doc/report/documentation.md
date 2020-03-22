@@ -43,9 +43,10 @@ Publications are only included in the analysis if they belong to journals which 
 - *International Journal on Digital Libraries*
 - *International Journal of Digital Curation*
 
-The first steps in this analysis were to fetch relevant data from [Crossref](https://www.crossref.org/) and [Microsoft Academic](https://academic.microsoft.com/home) (both services offer an API), which include articles published after 2002 until 2020. For each journal, using the ISSN number as a reference, we created two distinct files, one for each dataset used ([the folder 'crossref'](https://github.com/br0ast/ACDH-2020/tree/master/src/data/crossref) contains all the data fetched from Crossref, while [the folder 'mag'](https://github.com/br0ast/ACDH-2020/tree/master/src/data/mag) contains the data from Microsoft Academic). For each article, we collected several metadata such as title, year of publication, affiliation, DOI, and keywords (for the complete list of data see Table 1 and Table 2). The use of Microsoft Academic became necessary as we noted that keywords and affiliations were not always present in Crossref.
+The first steps in this analysis were to fetch relevant data from [Crossref](https://www.crossref.org/) and [Microsoft Academic](https://academic.microsoft.com/home) (both services offer an API), which include articles published after 2002 until 2020. For each journal, using the ISSN number as a reference, we created two distinct files, one for each dataset used ([the folder 'crossref'](https://github.com/br0ast/ACDH-2020/tree/master/src/data/crossref) contains all the data fetched from Crossref, while [the folder 'mag'](https://github.com/br0ast/ACDH-2020/tree/master/src/data/mag) contains the data from Microsoft Academic). For each article, we collected several metadata such as title, year of publication, affiliation, DOI, and keywords (for the list of reused metadata see Table 1 and Table 2). The use of Microsoft Academic became necessary as we noted that keywords and affiliations were not always present in Crossref.
 
-**Table 1. Metadata for each DH article obtained from Microsoft Academic**
+**Table 1. Metadata reused from Microsoft Academic for each DH article**
+
 | Data | Example (CSV) |
 |--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | DOI | 10.1093/llc/fqt054 |
@@ -53,10 +54,13 @@ The first steps in this analysis were to fetch relevant data from [Crossref](htt
 | keywords | the internet;; sociology;; scholarship;; parliament;; objective evidence;; irish;; humanities;; digital humanities;; digital content;; citation |
 | abstract | substantial;; corpus;; digital;; materials;; now;; scholarship;; across;; disciplines;; objective;; evidence;; impact;; value;; robust;; assessment;; [...] |
 
-**Table 2. Metadata for each DH article obtained from Crossref**
-<!---
-Table 2
--->
+**Table 2. Metadata reused from Crossref for each DH article**
+| Crossref | Example (JSON) |
+|---------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| DOI | "DOI": "10.1093/llc/fqt054" |
+| date of publication | "created": { "date-parts": [ [ 2013, 9, 12] ], "date-time": "2013-09-12T03:56:45Z",,"timestamp": 1378958205000 } |
+| author(s) | "author": [ { "given": "L. M.", "family": "Hughes", "sequence": "first", "affiliation": [] }, { "given": "P. S.", "family": "Ell", "sequence": "additional", "affiliation": [] }, […] ] |
+| title | "title": [ "Assessing and measuring impact of a digital collection in the humanities: An analysis of the SPHERE (Stormont Parliamentary Hansards: Embedded in Research and Education) Project" ] |
 
 In order to be able to answer **RQ1**, we matched each article with its affiliated institution in the DH course registry and generated a new enriched dataset for the DH course registry which also provides the number of DH publications for each institution and the number of collaborations (in terms of co-authored articles) with other institutions of the registry.
 
