@@ -1,3 +1,7 @@
+## 22/03/2020
+We have two important datasets we are going to use in the final visualization: `src/data/res/affiliation.json` and `src/data/res/technique.json`. The actual website/webapp is stored inside `project/`.
+Once a user selects a datetime range, we query the `src/data/res/technique.json` and get the list of DOIs for each different technique, this same list is used to get all the articles from `src/data/res/affiliation.json`. Then we check whether the given article has in its affiliation the institution inserted in the search-box, if thats the case we will include the related article in the graph-network visualization. 
+
 ## 14/03/2020
 In `courses.json` we have the `contact_mail` attribute for each course. This value indicates the email domain of the related course. We can use such value to look for the authors which publish on the Digital Humanities Journals.
 
