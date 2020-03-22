@@ -9,9 +9,11 @@ This project sets out to enhance the DH course registry with new data and visual
 
 **RQ1** How many Digital Humanities articles are affiliated to the institutions of the registry? Were there any collaborations, i.e. co-authored DH articles, between the institutions?
 
-**RQ2** What kind of Digital Humanities articles do the institutions publish? To what extent are the articles related to the disciplines and techniques taught in the offered DH courses?
+**RQ2** Which are the most adopted technique in published research?   
 
-Our aim is to provide additional support for students resorting to the DH course registry to choose the Digital Humanities programme that's right for them. Getting a taste of the type of DH research carried out by the institutions will help users choose the course that better aligns with their objectives and expectations. Someone searching for a PhD programme, for example, could use the extra data to identify the institutions that publish the most papers on the discipline(s) of her interest.
+What kind of Digital Humanities articles do the institutions publish? To what extent are the articles related to the disciplines and techniques taught in the offered DH courses?
+
+Our aim is to provide additional support for students resorting to the DH course registry to choose the Digital Humanities programme that's right for them. Getting a taste of the type of DH research carried out by the institutions will help users choose the course that better aligns with their objectives and expectations. Someone searching for a PhD programme, for example, could use the extra data to identify the methods or techniques that produce the most published research.
 
 ### Research methodology
 
@@ -41,7 +43,7 @@ Publications are only included in the analysis if they belong to journals which 
 - *Computational Linguistics*
 - *AI & SOCIETY*
 - *International Journal on Digital Libraries*
-- *International Journal of Digital Curation*
+- *INTERNATIONAL JOURNAL OF DIGITAL CURATION*
 
 The first steps in this analysis were to fetch relevant data from [Crossref](https://www.crossref.org/) and [Microsoft Academic](https://academic.microsoft.com/home) (both services offer an API), which include articles published after 2002 until 2020. For each journal, using the ISSN number as a reference, we created two distinct files, one for each dataset used ([the folder 'crossref'](https://github.com/br0ast/ACDH-2020/tree/master/src/data/crossref) contains all the data fetched from Crossref, while [the folder 'mag'](https://github.com/br0ast/ACDH-2020/tree/master/src/data/mag) contains the data from Microsoft Academic). For each article, we collected several metadata such as title, year of publication, affiliation, DOI, and keywords (for the list of reused metadata see Table 1 and Table 2). The use of Microsoft Academic became necessary as we noted that keywords and affiliations were not always present in Crossref.
 
@@ -64,12 +66,12 @@ The first steps in this analysis were to fetch relevant data from [Crossref](htt
 
 In order to be able to answer **RQ1**, we matched each article with its affiliated institution in the DH course registry and generated a new enriched dataset for the DH course registry which also provides the number of DH publications for each institution and the number of collaborations (in terms of co-authored articles) with other institutions of the registry.
 
-For **RQ2**, we reused the data from Microsoft Academic and Crossref to match the disciplines as well as the techniques of each DH course with all related articles. In particular, an article is associated with a discipline or technique when the discipline or technique appears among the article keywords.
+For **RQ2**, we matched each technique of the registry with all related articles. In particular, an article is associated with a technique when the technique appears among the article keywords.
 
 <!---
 Check, are we going to create a single script (to be launched once a week) calling any other script?
 -->
-The script used to generate the enriched dataset is available [here](https://github.com/br0ast/ACDH-2020/tree/master/src/script). This script is ideally meant to be run at least once a month so to maintain the DH course registry up-to-date with new DH publications. The last updated date and time will be displayed to ensure users are aware of the degree of freshness of the data. 
+The script used to generate the enriched dataset is available [here](https://github.com/br0ast/ACDH-2020/tree/master/src/script). This script is ideally meant to be run at least once a month so to maintain the DH course registry up-to-date with new DH publications. The last updated date and time will be displayed to ensure users are aware of the data freshness.
 
 ### Research outcome
 
