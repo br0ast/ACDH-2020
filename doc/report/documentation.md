@@ -7,11 +7,11 @@ Whether at BA, MA or PhD level, choosing the right Digital Humanities programme 
 
 This project sets out to enhance the DH course registry with new data and visualizations. In particular, it integrates data from Crossref to make it possible for the registry to answers the following questions through additional visualizations:
 
-**RQ1** How many Digital Humanities articles are affiliated to the institutions of the registry? Were there any collaborations, i.e. co-authored DH articles, between the institutions?
+**RQ1** How many Digital Humanities articles are affiliated to the institutions of the registry?
 
-**RQ2** Which are the most adopted techniques in published research?   
+**RQ2** Were there any collaborations, i.e. co-authored DH articles, between the institutions?
 
-What kind of Digital Humanities articles do the institutions publish? To what extent are the articles related to the disciplines and techniques taught in the offered DH courses?
+**RQ3** Which are the most adopted techniques in published research?
 
 Our aim is to provide additional support for students resorting to the DH course registry to choose the Digital Humanities programme that's right for them. Getting a taste of the type of DH research carried out by the institutions will help users choose the course that better aligns with their objectives and expectations. Someone searching for a PhD programme, for example, could use the extra data to identify the methods or techniques that produce the most published research.
 
@@ -64,7 +64,7 @@ The first steps in this analysis were to fetch relevant data from [Crossref](htt
 | author(s) | "author": [ { "given": "L. M.", "family": "Hughes", "sequence": "first", "affiliation": [] }, { "given": "P. S.", "family": "Ell", "sequence": "additional", "affiliation": [] }, […] ] |
 | title | "title": [ "Assessing and measuring impact of a digital collection in the humanities: An analysis of the SPHERE (Stormont Parliamentary Hansards: Embedded in Research and Education) Project" ] |
 
-In order to be able to answer **RQ1**, we matched each article with its affiliated institution in the DH course registry and generated a new enriched dataset for the DH course registry which also provides the number of DH publications for each institution and the number of collaborations (in terms of co-authored articles) with other institutions of the registry.
+In order to be able to answer **RQ1** and **RQ2**, we matched each article with its affiliated institution in the DH course registry and generated a new enriched dataset for the DH course registry which also provides the number of DH publications for each institution and the number of collaborations (in terms of co-authored articles) with other institutions of the registry.
 
 For **RQ2**, we matched each technique of the registry with all related articles. In particular, an article is associated with a technique when the technique appears among the article keywords.
 
