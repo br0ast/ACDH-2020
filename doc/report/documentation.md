@@ -76,7 +76,13 @@ The script used to generate the enriched dataset is available [here](https://git
 
 ### Research outcome
 
-#### User-friendly description of the tool / vizs
+In order to show the new statistics for each DH course in the registry, we propose two different visualizations. For RQ1 and RQ2, we realized a network graph where the nodes represent institutions and the edges represent collaborations between institutions (Figure 1). When selecting a DH course from the registry, users see a partial network graph with the node of the institution offering the course and all related institutions. The thicker the edge, the higher the number of collaborations between the two institutions. By clicking on a node, the number of articles affiliated to the institutions appears alongside with the list of clickable article DOIs. Similarly, by clicking on an edge, the number of co-authored articles appears alongside with the list of clickable article DOIs.
+
+<!---
+Figure 1
+-->
+
+
 #### How to run the tool
 	
 ### Limitations and suggestions for future work
