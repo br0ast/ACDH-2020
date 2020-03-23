@@ -45,16 +45,15 @@ Publications are only included in the analysis if they belong to journals which 
 - *International Journal on Digital Libraries*
 - *INTERNATIONAL JOURNAL OF DIGITAL CURATION*
 
-The first steps in this analysis were to fetch relevant data from [Crossref](https://www.crossref.org/) and [Microsoft Academic](https://academic.microsoft.com/home) (both services offer an API), which include articles published after 2002 until 2020. For each journal, using the ISSN number as a reference, we created two distinct files, one for each dataset used ([the folder 'crossref'](https://github.com/br0ast/ACDH-2020/tree/master/src/data/crossref) contains all the data fetched from Crossref, while [the folder 'mag'](https://github.com/br0ast/ACDH-2020/tree/master/src/data/mag) contains the data from Microsoft Academic). For each article, we collected several metadata such as title, year of publication, affiliation, DOI, and keywords (for the list of reused metadata see Table 1 and Table 2). The use of Microsoft Academic became necessary as we noted that keywords and affiliations were not always present in Crossref.
+The first steps in this analysis were to fetch relevant data from [Crossref](https://www.crossref.org/) and [Microsoft Academic](https://academic.microsoft.com/home) (both services offer an API), which include articles published after 2002 until 2020. For each journal, using the ISSN number as a reference, we created two distinct files, one for each dataset used (the file '[dh_in_crossref.json](https://github.com/br0ast/ACDH-2020/blob/master/src/data/gen/dh_in_crossref.json)' contains all the data fetched from Crossref, while [the file 'dh_in_mag](https://github.com/br0ast/ACDH-2020/blob/master/src/data/gen/dh_in_mag.json)' contains the data from Microsoft Academic). For each article, we collected several metadata such as title, year of publication, affiliation, DOI, and keywords (for the full list of reused metadata see Table 1 and Table 2). The use of Microsoft Academic became necessary as we noted that keywords and affiliations were not always present in Crossref.
 
 **Table 1. Metadata reused from Microsoft Academic for each DH article**
-
-| Data | Example (CSV) |
-|--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| DOI | 10.1093/llc/fqt054 |
-| affiliation | National Library of Wales;; Queen's University Belfast;; University of London;; University of Malta |
-| keywords | the internet;; sociology;; scholarship;; parliament;; objective evidence;; irish;; humanities;; digital humanities;; digital content;; citation |
-| abstract | substantial;; corpus;; digital;; materials;; now;; scholarship;; across;; disciplines;; objective;; evidence;; impact;; value;; robust;; assessment;; [...] |
+| Data | Example (JSON) |
+|-------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| DOI | "DOI": "10.1093/llc/fqt054" |
+| affiliation | "AA.DAfN": [ "National Library of Wales", " Queen's University Belfast", " University of London", " University of Malta" ] |
+| keywords | "F.FN": "the internet;; sociology;; scholarship;; parliament;; objective evidence;; irish;; humanities;; digital humanities;; digital content;; citation" |
+| abstract | "AW": "substantial;; corpus;; digital;; materials;; now;; scholarship;; across;; disciplines;; objective;; evidence;; impact;; value;; robust;; assessment;; sparse;; [...]" |
 
 **Table 2. Metadata reused from Crossref for each DH article**
 | Data | Example (JSON) |
