@@ -45,7 +45,7 @@ Publications are only included in the analysis if they belong to journals which 
 - *International Journal on Digital Libraries*
 - *INTERNATIONAL JOURNAL OF DIGITAL CURATION*
 
-The first steps in this analysis were to fetch relevant data from [Crossref](https://www.crossref.org/) and [Microsoft Academic](https://academic.microsoft.com/home) (both services offer an API), which include articles published after 2002 until 2020. For each journal, using the ISSN number as a reference, we created two distinct files, one for each dataset used (the file [dh_in_crossref.json](https://github.com/br0ast/ACDH-2020/blob/master/src/data/gen/dh_in_crossref.json) contains all the data fetched from Crossref, while [the file dh_in_mag.json](https://github.com/br0ast/ACDH-2020/blob/master/src/data/gen/dh_in_mag.json) contains the data from Microsoft Academic). For each article, we collected several metadata such as title, year of publication, affiliation, DOI, and keywords (for the full list of reused metadata see Table 1 and Table 2). The use of Microsoft Academic became necessary as we noted that keywords and affiliations were not always present in Crossref.
+The first steps in this analysis were to fetch relevant data from [Crossref](https://www.crossref.org/) and [Microsoft Academic](https://academic.microsoft.com/home) (both services offer an API), which include articles published after 2002 until 2020. For each journal, using the ISSN number as a reference, we obtained two distinct files, one for each dataset used (the file [dh_in_crossref.json](https://github.com/br0ast/ACDH-2020/blob/master/src/data/gen/dh_in_crossref.json) contains all the data fetched from Crossref, while [the file dh_in_mag.json](https://github.com/br0ast/ACDH-2020/blob/master/src/data/gen/dh_in_mag.json) contains the data from Microsoft Academic). For each article, we collected several metadata such as title, year of publication, affiliation, DOI, and keywords (for the full list of reused metadata see Table 1 and Table 2). The use of Microsoft Academic became necessary as we noted that keywords and affiliations were not always present in Crossref.
 
 **Table 1. Metadata reused from Microsoft Academic for each DH article**
 | Data | Example (JSON) |
@@ -66,6 +66,8 @@ The first steps in this analysis were to fetch relevant data from [Crossref](htt
 In order to be able to answer **RQ1** and **RQ2**, we matched each article with its affiliated institution in the DH course registry and generated a new enriched dataset for the DH course registry which also provides the number of DH publications for each institution and the number of collaborations (in terms of co-authored articles) with other institutions of the registry.
 
 For **RQ3**, we matched each technique of the registry with all related articles. In particular, an article is associated with a technique when the technique appears among the article keywords.
+
+The datasets generated are available from [this folder](https://github.com/br0ast/ACDH-2020/tree/master/src/data/res).  
 
 <!---
 Check, are we going to create a single script (to be launched once a week) calling any other script?
