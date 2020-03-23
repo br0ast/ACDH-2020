@@ -77,12 +77,18 @@ The script used to generate the enriched dataset is available [here](https://git
 ### Research outcome
 
 In order to show the new statistics for each DH course in the registry, we propose two different visualizations. 
-For RQ1 and RQ2, we realized a network graph where nodes represent institutions while edges represent collaborations between institutions (Figure 1). When selecting a DH course from the registry, users see a partial network graph featuring the node of the institution offering the course at the centre accompanied by all institutions with which there was at least one collaboration. The thicker the edge, the higher the number of collaborations between the two institutions. By clicking on a node, the number of articles affiliated to the institutions appears alongside with the list of clickable article DOIs. Similarly, by clicking on an edge, the number of co-authored articles appears alongside with the list of clickable article DOIs.
+
+For **RQ1** and **RQ2**, we realized a network graph where nodes represent institutions while edges represent collaborations between institutions (Figure 1). When selecting a DH course from the registry, users see a partial network graph featuring the node of the institution offering the course at the centre accompanied by all institutions with which there was at least one collaboration. The thicker the edge, the higher the number of collaborations between the two institutions. By clicking on a node, the number of articles affiliated to the institutions appears alongside with the list of clickable article DOIs. Similarly, by clicking on an edge, the number of co-authored articles appears alongside with the list of clickable article DOIs.
 
 <!---
 Figure 1
 -->
 
+For **RQ3**, we generated an instogram which allows a comparison between the techniques of two different DH courses (Figure 2). Each bar of the instogram represents a technique taught in one of the courses selected. If a technique is taught in both courses, the bar is coloured in orange, whereas if the technique is taught only in one of the two courses the bar is either red (for one of the two courses) or blue (for the other). The higher the bar, the higher the number of published research that employs the technique. By clicking on a bar, the number of relevant articles appears alongside with the the list of clickable article DOIs.   
+
+<!---
+Figure 2
+-->
 
 #### How to run the tool
 	
