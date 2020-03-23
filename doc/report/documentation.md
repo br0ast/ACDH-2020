@@ -90,7 +90,7 @@ For **RQ3**, we generated an histogram which allows a comparison between the tec
 Figure 2
 -->
 
-#### How to run the tool
+### How to run the tool
 	
 ### Limitations and suggestions for future work
 
