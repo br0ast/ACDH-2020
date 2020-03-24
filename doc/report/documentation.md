@@ -1,25 +1,25 @@
-# Choosing the Digital Humanities programme that’s right for you: an enhanced DH course registry with new data and visualizations
+# Choosing the right Digital Humanities programme: an enhanced DH course registry with new data and visualizations
 ## A project for the ACDH-CH Hackathon 2020
 
 ### Introduction
 
-Whether at BA, MA or PhD level, choosing the right Digital Humanities programme is not an easy task. The Digital Humanities course registry features an ongoing list of institutions offering such programmes, besides single courses and other types of training events such as summer schools. The registry contains up-to-date information about the disciplines and techniques taught within each DH course, but it does not take advantage of ever growing external dataset such as Crossref, which contains insightful metadata about global scholarly research, including DH.
+Whether at BA, MA or PhD level, choosing the right Digital Humanities programme is not an easy task. The Digital Humanities course registry features an ongoing list of institutions offering such programmes, in addition to single courses and other types of training events such as summer schools. The registry collects up-to-date information about the disciplines and techniques taught within each DH course, but it does not take advantage of ever growing external datasets such as Crossref, which contains insightful metadata about global scholarly research, including DH.
 
 This project sets out to enhance the DH course registry with new data and visualizations. In particular, it integrates data from Crossref to make it possible for the registry to answers the following questions through additional visualizations:
 
 **RQ1** How many Digital Humanities articles are affiliated to the institutions of the registry?
 
-**RQ2** Were there any collaborations, i.e. co-authored DH articles, between the institutions?
+**RQ2** Are there any collaborations, i.e. co-authored DH articles, between the institutions?
 
-**RQ3** Which are the most adopted techniques in published research?
+**RQ3** Which are the techniques most often adopted in published research?
 
-Our aim is to provide additional support for students resorting to the DH course registry to choose the Digital Humanities programme that's right for them. Getting a taste of the type of DH research carried out by the institutions will help users choose the course that better aligns with their objectives and expectations. Someone searching for a PhD programme, for example, could use the extra data to identify the methods or techniques that produce the most published research.
+Our aim is to provide additional support for students resorting to the DH course registry to choose the Digital Humanities programme that is right for them. Getting a taste of the type of DH research carried out by the institutions will help users choose the course which best aligns with their objectives and expectations. Someone searching for a PhD programme, for example, could use the extra data to identify the methods or techniques that produce the most published research.
 
 ### Research methodology
 
-Publications are only included in the analysis if they belong to journals which are either exclusively or significantly DH-oriented. We based our selection of the journals on the classification proposed in Spinaci, Colavizza and Peroni (2019). We were able to collect data about 23 of the 36 journals of the classification (the remaining journals are, unfortunately, not yet part of Crossref). The journals included are:
+The analysis only includes articles published in journals which are either exclusively or significantly DH-oriented. We based our selection of the journals on the classification proposed in Spinaci, Colavizza and Peroni (2019). We were able to collect data about 23 of the 36 journals of the classification (the remaining journals are, unfortunately, not yet part of Crossref). The journals included are:
 
-**Journals that exclusively publish DH articles (14 in total, out of 19)**
+**Journals that publish DH articles exclusively (14 in total, out of 19)**
 - *Frontiers in Digital Humanities*
 - *Literary and Linguistics Computing* / *Digital Scholarship in the Humanities (DSH)*
 - *Digital Studies / Le champ numérique*
@@ -34,7 +34,7 @@ Publications are only included in the analysis if they belong to journals which 
 - *International Journal of Humanities and Arts Computing*
 - *Digital Medievalist*
 
-**Journals that publish a significant number of DH articles (9  in total, out of 17)**
+**Journals that publish a significant number of DH articles as part of their contents (9  in total, out of 17)**
 - *Journal of Library Metadata*
 - *Journal of Quantitative Linguistics*
 - *Language Resources and Evaluation*
@@ -45,7 +45,7 @@ Publications are only included in the analysis if they belong to journals which 
 - *International Journal on Digital Libraries*
 - *INTERNATIONAL JOURNAL OF DIGITAL CURATION*
 
-The first steps in this analysis were to fetch relevant data from [Crossref](https://www.crossref.org/) and [Microsoft Academic](https://academic.microsoft.com/home) (both services offer an API), which include articles published after 2002 until 2020. For each journal, using the ISSN number as a reference, we obtained two distinct files, one for each dataset used (the file [dh_in_crossref.json](https://github.com/br0ast/ACDH-2020/blob/master/src/data/gen/dh_in_crossref.json) contains all the data fetched from Crossref, while [the file dh_in_mag.json](https://github.com/br0ast/ACDH-2020/blob/master/src/data/gen/dh_in_mag.json) contains the data from Microsoft Academic). For each article, we collected several metadata such as title, year of publication, affiliation, DOI, and keywords (for the full list of reused metadata see Table 1 and Table 2). The use of Microsoft Academic became necessary as we noted that keywords and affiliations were not always present in Crossref.
+The first steps in this analysis were to fetch relevant data from [Crossref](https://www.crossref.org/) and [Microsoft Academic](https://academic.microsoft.com/home) (both services offer an API), which include articles published from 2002 to 2020. For each journal, using the ISSN number as a reference, we obtained two distinct files, one for each dataset used (the file [dh_in_crossref.json](https://github.com/br0ast/ACDH-2020/blob/master/src/data/gen/dh_in_crossref.json) contains all the data fetched from Crossref, while [the file dh_in_mag.json](https://github.com/br0ast/ACDH-2020/blob/master/src/data/gen/dh_in_mag.json) contains the data from Microsoft Academic). For each article, we collected several metadata such as title, year of publication, affiliation, DOI, and keywords (for the full list of reused metadata see Table 1 and Table 2). The use of Microsoft Academic became necessary as we noted that keywords and affiliations were not always present in Crossref.
 
 **Table 1. Metadata reused from Microsoft Academic for each DH article**
 | Data | Example (JSON) |
@@ -67,24 +67,24 @@ In order to be able to answer **RQ1** and **RQ2**, we matched each article with 
 
 For **RQ3**, we matched each technique of the registry with all related articles. In particular, an article is associated with a technique when the technique appears among the article keywords.
 
-The datasets generated are available from [this folder](https://github.com/br0ast/ACDH-2020/tree/master/src/data/res).  
+The generated datasets are available from [this folder](https://github.com/br0ast/ACDH-2020/tree/master/src/data/res).  
 
 <!---
 Check, are we going to create a single script (to be launched once a week) calling any other script?
 -->
-The script used to generate the enriched dataset is available [here](https://github.com/br0ast/ACDH-2020/tree/master/src/script). This script is ideally meant to be run at least once a month so to maintain the DH course registry up-to-date with new DH publications. The last updated date and time will be displayed to ensure users are aware of the data freshness.
+The script used to generate the enriched dataset is available [here](https://github.com/br0ast/ACDH-2020/tree/master/src/script). Ideally, this script is meant to be run at least once a month so to maintain the DH course registry up-to-date with new DH publications. The last updated date and time will be displayed to ensure users are aware of the data freshness.
 
 ### Research outcome
 
 In order to show the new statistics for each DH course in the registry, we propose two different visualizations. 
 
-For **RQ1** and **RQ2**, we realized a network graph where nodes represent institutions while edges represent collaborations between institutions (Figure 1). When selecting a DH course from the registry, users see a partial network graph featuring the node of the institution offering the course at the centre accompanied by all institutions with which there was at least one collaboration. The thicker the edge, the higher the number of collaborations between the two institutions. By clicking on a node, the number of articles affiliated to the institutions appears alongside with the list of clickable article DOIs. Similarly, by clicking on an edge, the number of co-authored articles appears alongside with the list of clickable article DOIs.
+For **RQ1** and **RQ2**, we realized a network graph where nodes represent institutions while edges represent collaborations between institutions (Figure 1). When selecting a DH course from the registry, at the centre users see a partial network graph featuring the node of the institution offering the course, accompanied by all institutions with which at least one collaboration was established. The thicker the edge, the higher the number of collaborations between the two institutions. By clicking on a node, the number of articles affiliated to the institutions appears alongside with the list of clickable article DOIs. Similarly, by clicking on an edge, the number of co-authored articles appears alongside with the list of clickable article DOIs.
 
 <!---
 Figure 1
 -->
 
-For **RQ3**, we generated an histogram which allows a comparison between the techniques of two different DH courses (Figure 2). Each bar of the histogram represents a technique taught in one of the courses selected. If a technique is taught in both courses, the bar is coloured in orange, whereas if the technique is taught only in one of the two courses the bar is either red (for one of the two courses) or blue (for the other). The higher the bar, the higher the number of published research that employs the technique. By clicking on a bar, the number of relevant articles appears alongside with the list of clickable article DOIs.   
+For **RQ3**, we generated a histogram which allows a comparison between the techniques of two different DH courses (Figure 2). Each bar of the histogram represents a technique taught in one of the courses selected. If a technique is taught in both courses, the bar is coloured in orange, whereas if the technique is taught only in one of the two courses the bar is either red (for one of the two courses) or blue (for the other). The higher the bar, the higher the number of published research that employs the technique. By clicking on a bar, the number of relevant articles appears alongside with the list of clickable article DOIs.   
 
 <!---
 Figure 2
@@ -94,11 +94,11 @@ Figure 2
 	
 ### Limitations and suggestions for future work
 
-An important limitation of this study is that it includes a limited number of Digital Humanities publications: many relevant journals are not yet indexed in Crossref and, due to a lack of open data, we did not take into consideration monographs despite they represent a traditional method of research dissemination in the humanities. Future research might be able to integrate the DH course registry with more publications as they get indexed into open datasets such as Crossref or Microsoft Academic.
+This study includes a limited number of Digital Humanities publications: many relevant journals are not yet indexed in Crossref and, due to a lack of open data, we did not take into consideration monographs, despite the fact that they represent a traditional method of research dissemination in the humanities. Future research might be able to integrate the DH course registry with more publications as they get indexed into open datasets such as Crossref or Microsoft Academic.
 In addition, the project could be developed further by:
  - analysing the disciplines taught in the courses besides the techniques;
  - compare the techniques with job offers to see which techniques are most requested in the job market;
- - allowing the comparison among multiple DH courses (as of now, our visualization supports the comparison between a maximum of two courses).  
+ - allowing for the comparison among multiple DH courses (as of now, our visualization supports comparison between two courses only).  
 
 ### References
 
