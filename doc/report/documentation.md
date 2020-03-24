@@ -97,7 +97,7 @@ Figure 2
 This study includes a limited number of Digital Humanities publications: many relevant journals are not yet indexed in Crossref and, due to a lack of open data, we did not take into consideration monographs, despite the fact that they represent a traditional method of research dissemination in the humanities. Future research might be able to integrate the DH course registry with more publications as they get indexed into open datasets such as Crossref or Microsoft Academic.
 In addition, the project could be developed further by:
  - analysing the disciplines taught in the courses besides the techniques;
- - compare the techniques with job offers to see which techniques are most requested in the job market;
+ - comparing the techniques with job offers to see which techniques are most requested in the job market;
  - allowing for the comparison among multiple DH courses (as of now, our visualization supports comparison between two courses only).  
 
 ### References
