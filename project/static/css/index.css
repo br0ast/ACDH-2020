@@ -1,0 +1,130 @@
+body{
+    margin: 0px auto;
+    font-family: "Gill Sans", sans-serif;
+}
+
+header{
+  height: 50px;
+  background-color: #204051;
+}
+
+#top{
+    margin: 0 auto;
+    height: fit-content;
+    width: 100%;
+    background-color: #f1f3f4;
+    height: fit-content;
+    min-height: 250px;
+    max-height: 300px;
+    border-bottom: solid 1px #204051;
+    padding-bottom: 30px;
+}
+
+#top .inputbox-container{
+    padding-top: 80px;
+    margin: 0 auto;
+    width: 50%;
+}
+#top .inputbox-container #main_input{
+    width: 80%;
+    font-size: 15pt;
+    border: solid gray 2pt;
+    border-radius: 10px;
+    padding: 10px;
+}
+.inputbox-container button{
+  display: inline-block;
+  font-size: 15pt;
+  padding: 10px;
+  margin-top: -10px;
+}
+#boxes_container{
+  margin: 0 auto;
+  width: 50%;
+  padding-top: 15px;
+  z-index: 1;
+}
+#boxes_container .a-box{
+  padding: 10px;
+  width: fit-content;
+  border-radius: 10px;
+  border: solid gray 1px;
+  display: inline-block;
+  color: white;
+}
+#boxes_container .a-box .del-btn{
+  display: inline-block;
+  margin-left: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  opacity: 0.9;
+}
+#boxes_container .a-box .del-btn:hover{
+  cursor: pointer;
+  opacity: 1;
+}
+#boxes_container .a-box + .a-box{
+  margin-left: 10px;
+}
+
+
+.autocomplete {
+  /*the container must be positioned relative:*/
+  position: relative;
+  display: inline-block;
+}
+
+.autocomplete-items{
+  position: absolute;
+  width: 40%;
+  border-top: none;
+  z-index: 99;
+  color: gray;
+  font-size: 13pt;
+  max-height: 300px;
+  overflow:auto;
+  border-right: solid 2pt lightgray;
+  border-left: solid 2pt lightgray;
+  border-bottom: solid 10pt rgba(212,212,212,1);
+  border-radius: 0px 0px 10px 10px;
+}
+
+.autocomplete-items div {
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid lightgray;
+  padding: 5px;
+}
+.autocomplete-items div:hover {
+  /*when hovering an item:*/
+  background-color: #F6F6F6;
+  color: #178dd4;
+}
+.autocomplete-active {
+  /*when navigating through the items using the arrow keys:*/
+  background-color: #178dd4 !important;
+  color: #ffffff;
+}
+
+/*When the window gets smaller*/
+@media only screen and (max-width: 720px) {
+  #top .inputbox-container{
+    width: 90%;
+  }
+  #top .inputbox-container #main_input{
+    font-size: 13pt;
+    width: 80%;
+  }
+  #boxes_container{
+    width: 90%;
+  }
+  #boxes_container .a-box + .a-box{
+    display: block;
+    margin-left: 0px;
+    margin-top: 10px;
+  }
+
+}
