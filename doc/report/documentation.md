@@ -102,5 +102,5 @@ In addition, the project could be developed further by:
 
 ### References
 
-Spinaci, Gianmarco, Colavizza, Giovanni, & Peroni, Silvio. (2019). List of Digital Humanities journals (Version 0.1.0) [Data set]. Zenodo. http://doi.org/10.5281/zenodo.3406564
+Spinaci, Gianmarco, Colavizza, Giovanni, & Peroni, Silvio. (2019). List of Digital Humanities journals (Version 0.1.0) [Dataset]. Zenodo. http://doi.org/10.5281/zenodo.3406564
 
