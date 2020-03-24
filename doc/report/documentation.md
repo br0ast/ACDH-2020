@@ -94,6 +94,12 @@ Figure 2
 	
 ### Limitations and suggestions for future work
 
+An important limitation of this study is that it includes a limited number of Digital Humanities publications: many relevant journals are not yet indexed in Crossref and, due to a lack of open data, we did not take into consideration monographs despite they represent a traditional method of research dissemination in the humanities. Future research might be able to integrate the DH course registry with more publications as they get indexed into open datasets such as Crossref or Microsoft Academic.
+In addition, the project could be developed further by:
+ - analysing the disciplines taught in the courses besides the techniques;
+ - compare the techniques with job offers to see which techniques are most requested in the job market;
+ - allowing the comparison among multiple DH courses (as of now, our visualization supports the comparison between a maximum of two courses).  
+
 ### References
 
 Spinaci, Gianmarco, Colavizza, Giovanni, & Peroni, Silvio. (2019). List of Digital Humanities journals (Version 0.1.0) [Data set]. Zenodo. http://doi.org/10.5281/zenodo.3406564
