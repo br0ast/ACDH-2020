@@ -14,7 +14,7 @@ class Layout {
     var autocomplete_list = []
     $.ajax({
             type: "GET",
-            url: this.acdh_data_url+"institutions.json",
+            url: this.acdh_data_url+"acdh/institutions.json",
             dataType: "json",
             async: true,
             success: function(data) {
@@ -152,6 +152,136 @@ class Layout {
     document.addEventListener("click", function (e) {
         closeAllLists(e.target);
     });
+    }
+
+  }
+
+  init_q1(){
+  }
+
+  init_q2(){
+    var nodes = {}
+    var edges = {}
+
+    $.ajax({
+            type: "GET",
+            url: this.acdh_data_url+"res/affiliation.json",
+            dataType: "json",
+            async: true,
+            success: function(data) {
+              //Build the autocomplete_list
+              for (var k_doi in data) {
+                if("acdh_aff" in data[k_doi]){
+                  for (var i = 0; i < data[k_doi]["acdh_aff"].length; i++) {
+                    if (data[k_doi]["acdh_aff"][i] != "-1"){
+                      var inst_id = data[k_doi]["acdh_aff"][i].toString();
+                      if (!(inst_id in nodes)) {
+                        nodes[inst_id] = {"data": {"id": inst_id, "label":"TODO"}}
+                      }
+
+                      //check all edges
+                      for (var j = 0; j < data[k_doi]["acdh_aff"].length; j++) {
+                        if (j == i) {
+                          continue;
+                        }else {
+                            var dest_inst_id = data[k_doi]["acdh_aff"][j].toString();
+                            if ((dest_inst_id != "-1") && (dest_inst_id != inst_id)){
+                              var k_edge = [];
+
+                              var undirected_edge_k = null;
+                              if (inst_id+"-"+dest_inst_id in edges){
+                                  undirected_edge_k = inst_id+"-"+dest_inst_id
+                              }else {
+                                  if (dest_inst_id+"-"+inst_id in edges){
+                                    undirected_edge_k = dest_inst_id+"-"+inst_id;
+                                  }
+                              }
+
+                              if (undirected_edge_k == null) {
+                                edges[inst_id+"-"+dest_inst_id] = {"data": {"id": inst_id+"-"+dest_inst_id,"source": inst_id, "target":dest_inst_id, "count": 1}}
+                              }else {
+                                edges[undirected_edge_k]["data"]["count"] = edges[undirected_edge_k]["data"]["count"] + 1;
+                              }
+                            }
+                        }
+                      }
+
+                    }
+                  }
+                }
+              }
+
+              console.log(nodes);
+              console.log(edges);
+              build_cy();
+            }
+    });
+
+    function build_cy(){
+
+        var cy_nodes = [];
+        var cy_edges = [];
+
+        //build the cy_nodes and cy_edges
+        for (var k_node in nodes) {
+          cy_nodes.push(nodes[k_node]);
+        }
+        for (var k_edge in edges) {
+          cy_edges.push(edges[k_edge]);
+        }
+
+        var cy = window.cy = cytoscape({
+      					container: document.getElementById('cy'),
+
+      					autounselectify: true,
+
+      					boxSelectionEnabled: false,
+
+      					layout: {
+      						name: 'cola'
+      					},
+
+      					style: [
+      						{
+      							selector: 'node',
+      							css: {
+      								'background-color': '#C4C4C4'
+      							}
+      						},
+
+      						{
+      							selector: 'edge',
+      							css: {
+      								'line-color': '#DBDBDB'
+      							}
+      						}
+      					],
+
+      					elements: {
+      					  nodes: cy_nodes,
+      					  edges: cy_edges
+      					}
+      	});
+        _elem_onclick_handle();
+
+        function _elem_onclick_handle(){
+                  //nodes on click handler
+                  cy.nodes().on('click', function(e){
+                      console.log("Node clicked !", this._private.data.id,this);
+                      //diagram_instance.click_elem_style(this,'node');
+                      //diagram_instance.check_node_compatibility(this);
+                      //interface_instance.click_on_node(this);
+                  });
+
+                  //edges on click handler
+                  cy.edges().on('click', function(e){
+                      console.log("Edge clicked !", this._private.data.id,this);
+                      //diagram_instance.click_elem_style(this,'edge');
+                      //interface_instance.click_on_edge(this);
+                  });
+        }
+
+
     }
 
   }

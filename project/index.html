@@ -5,7 +5,7 @@
   <title>ACDH-2020</title>
   <link rel="stylesheet" type="text/css" href="static/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="static/css/index.css">
-	<script src="../static/js/cytoscape-cola.js"></script>
+
 </head>
 <body>
 
@@ -27,17 +27,27 @@
   </div>
 
   <div id="q2">
+    <div id="cy"></div>
   </div>
 
+  <!-- Cytoscape -->
+  <script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+  <!-- for testing with local version of cytoscape.js -->
+	<!--<script src="static/cytoscape/cytoscape.min.js"></script>-->
+  <script src="https://unpkg.com/webcola/WebCola/cola.min.js"></script>
+  <script src="static/cytoscape/dist/cytoscape-cola.js"></script>
 
-  <script src="../static/cytoscape/dist/cytoscape.min.js"></script>
   <script src="static/js/jquery.min.js"></script>
   <script src="static/js/layout.js"></script>
-  <script src="static/js/data.js"></script>
+
   <script>
-    var layout = new Layout("main_input", "https://ivanhb.github.io/data/src/acdh2020/acdh/");
+    var layout = new Layout("main_input", "https://ivanhb.github.io/data/src/acdh2020/");
     layout.init_interface();
+    layout.init_q2();
   </script>
+
+  <footer>
+  </footer>
 
 </body>
 </html>

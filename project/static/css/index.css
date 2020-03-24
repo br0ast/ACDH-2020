@@ -8,6 +8,12 @@ header{
   background-color: #204051;
 }
 
+footer{
+  height: 80px;
+  margin-top: 40px;
+  background-color: #204051;
+}
+
 #top{
     margin: 0 auto;
     height: fit-content;
@@ -107,6 +113,26 @@ header{
   /*when navigating through the items using the arrow keys:*/
   background-color: #178dd4 !important;
   color: #ffffff;
+}
+
+/* Q1 */
+#q1 {
+  margin: 0 auto;
+  margin-top: 30px;
+  width: 70%;
+  height: 300px;
+  border: 1pt solid darkgray;
+}
+
+
+/* Q2 */
+#cy {
+  margin: 0 auto;
+  margin-top: 30px;
+  width: 70%;
+  height: 500px;
+  z-index: 10;
+  border: 1pt solid darkgray;
 }
 
 /*When the window gets smaller*/
