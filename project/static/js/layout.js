@@ -737,7 +737,8 @@ class Layout {
           str_html = str_html + "<div class='node title'><span class='pre'>Institution</span><span>"+inst_obj["name"]+"</span>";
           //str_html = str_html + "<div class='node title'><span>"+inst_obj["name"]+"</span>";
           var courses_ids = Object.keys(inst_obj["course"]);
-          if (courses_ids > 0) {
+          console.log(courses_ids.length);
+          if (courses_ids.length > 0) {
             flag_courses = true;
             var a_course = inst_obj["course"][courses_ids[0]]
             if ("city" in a_course) {
@@ -753,7 +754,9 @@ class Layout {
         //Courses
         if (flag_courses) {
           str_html = str_html + "<div class='courses-header'>Courses</div><div class='courses'>";
+          var all_str_course = "";
           for (var course_k in inst_obj["course"]) {
+            console.log(course_k);
             var course_obj = inst_obj["course"][course_k];
             var str_course = "<div class='a-course'>";
 
@@ -778,10 +781,9 @@ class Layout {
             if (("info_url" in course_obj) && (course_obj["info_url"] != null)){
               str_course = str_course + "<div class='c-infourl'><a href='"+course_obj["info_url"]+"'>Visit the web site</a></div>";
             }
-
-            str_html = str_html + str_course + "</div>";
+            all_str_course = all_str_course +  str_course + "</div>";
           }
-          str_html = str_html + "</div>";
+          str_html = str_html + all_str_course + "</div>";
         }
 
         //articles
