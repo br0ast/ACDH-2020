@@ -5,7 +5,7 @@ class Layout {
     this.DATA = {};
     this.FILTERED_DATA = {};
 
-    this.COLORS = {"1":{"value":"#E85F63","assigned":false},"2":{"value":"#E8B15F","assigned":false},"12":{"value":"#FF9F76","assigned":true}}
+    this.COLORS = {"1":{"value":"#E85F63","assigned":false},"2":{"value":"#E8B15F","assigned":false},"merge":{"value":"#FF9F76","assigned":true}}
     this.main_input = document.getElementById(main_input_id);
     this.acdh_data_url = acdh_data_url;
     this.autocomplete_list = [];
@@ -164,7 +164,7 @@ class Layout {
           }
 
           if ($("#boxes_container .a-box").length == 2) {
-            $("#boxes_container").append('<div class="a-box auto" data-id="12" data-colorid="12" style="background-color:'+colors_palette["12"]["value"]+'">Both</div>');
+            $("#boxes_container").append('<div class="a-box auto" data-id="merge" data-colorid="merge" style="background-color:'+colors_palette["merge"]["value"]+'">Both</div>');
           }
 
           // Check the added available boxes
@@ -177,8 +177,8 @@ class Layout {
           });
           if($( "#boxes_container .a-box.auto" ).length > 0){
             $( "#boxes_container .a-box.auto" ).attr("data-id");
-            combined["id"] = "12";
-            combined["color"] = colors_palette["12"]["value"];
+            combined["id"] = "merge";
+            combined["color"] = colors_palette["merge"]["value"];
           }
 
           class_instance.update_q1("view", {ids: added_ids, combined: combined, colors: added_colors});
@@ -202,8 +202,8 @@ class Layout {
           });
           if($( "#boxes_container .a-box.auto" ).length > 0){
             $( "#boxes_container .a-box.auto" ).attr("data-id");
-            combined["id"] = "12";
-            combined["color"] = colors_palette["12"]["value"];
+            combined["id"] = "merge";
+            combined["color"] = colors_palette["merge"]["value"];
           }
 
           class_instance.update_q1("view", {ids: added_ids, combined: combined, colors: added_colors});
@@ -480,6 +480,8 @@ class Layout {
           autosize: false,
           width: 580,
           height: 850,
+          paper_bgcolor: '#f5fcfb',
+          plot_bgcolor: '#f5fcfb',
           font: {size: 14},
           bargap: 0.3,
           margin: {
@@ -658,6 +660,7 @@ class Layout {
               class_instance.Q2.cy.fit();
         });
 
+        cy.nodes('node[weight = 0]').style({'opacity': 0.3});
         //Highlight nodes
         var highlighted = class_instance.Q2.cy_data.highlighted;
         for (var inst_id in highlighted) {
@@ -665,8 +668,12 @@ class Layout {
         }
 
         //Adjust weight
-        cy.remove('node[weight = 0]');
-        var weight_fact_node = 80/class_instance.Q2.index_set.max_node_weight;
+        //cy.remove('node[weight = 0]');
+        var max_node_weight = class_instance.Q2.index_set.max_node_weight;
+        if (max_node_weight == 0) {
+          max_node_weight = 10;
+        }
+        var weight_fact_node = 80/max_node_weight;
         var weight_fact_edge = weight_fact_node * 0.45;
         var cy_nodes = class_instance.Q2.cy_data.nodes;
         var cy_edges = class_instance.Q2.cy_data.edges;
@@ -687,7 +694,6 @@ class Layout {
           cy.edges('edge[id="'+a_edge["data"]["id"]+'"]').style({'width': (a_edge_weight * weight_fact_edge).toString()+"pt"});
         }
 
-
         _elem_events_handle();
 
         function _elem_events_handle(){
@@ -701,8 +707,15 @@ class Layout {
                       class_instance.build_info_section("collaboration", this._private.data);
                   });
 
+                  cy.edges().on('mouseover', function(e){
+                    cy.edges('edge[id="'+this._private.data.id+'"]').style({'line-color': "#447ab2"});
+                  });
+                  cy.edges().on('mouseout', function(e){
+                    cy.edges('edge[id="'+this._private.data.id+'"]').style({'line-color': class_instance.Q2.edge_default_color});
+                  });
+
                   cy.nodes().on('mouseover', function(e){
-                    cy.nodes('node[id="'+this._private.data.id+'"]').style({'border-width': 2,'border-color': 'gray'});
+                    cy.nodes('node[id="'+this._private.data.id+'"]').style({'border-color': "#447ab2",'border-width': 3});
                   });
                   cy.nodes().on('mouseout', function(e){
                     cy.nodes('node[id="'+this._private.data.id+'"]').style({'border-width': 0});
@@ -756,7 +769,6 @@ class Layout {
           str_html = str_html + "<div class='courses-header'>Courses</div><div class='courses'>";
           var all_str_course = "";
           for (var course_k in inst_obj["course"]) {
-            console.log(course_k);
             var course_obj = inst_obj["course"][course_k];
             var str_course = "<div class='a-course'>";
 
@@ -778,6 +790,14 @@ class Layout {
             if (("department" in course_obj) && (course_obj["department"] != null)){
               str_course = str_course + "<div class='c-department'><span class='pre'>Department: </span>"+course_obj["department"]+"</div>";
             }
+            if (("tadirah_techniques" in course_obj) && (course_obj["tadirah_techniques"] != null) && (Object.keys(course_obj["tadirah_techniques"]).length > 0)){
+              var str_tadirah_techniques = "<div class='c-techniques'><span class='pre'>Techniques: </span>";
+              for (var i = 0; i < course_obj["tadirah_techniques"].length; i++) {
+                var tech_name = course_obj["tadirah_techniques"][i]["name"].trim();
+                str_tadirah_techniques = str_tadirah_techniques + "<div data-id='"+tech_name+"' class='tech'>"+tech_name+"</div>";
+              }
+              str_course = str_course + str_tadirah_techniques + "</div>";
+            }
             if (("info_url" in course_obj) && (course_obj["info_url"] != null)){
               str_course = str_course + "<div class='c-infourl'><a href='"+course_obj["info_url"]+"'>Visit the web site</a></div>";
             }
@@ -787,7 +807,9 @@ class Layout {
         }
 
         //articles
-        if ("dois" in inst_obj) {
+        var flag_articles = false;
+        if (("dois" in inst_obj) && (Object.keys(inst_obj["dois"]).length > 0)) {
+          flag_articles = true;
           var str_doi = "";
           var large_sec = "";
           if (!(flag_courses)) {
@@ -798,6 +820,13 @@ class Layout {
         }
 
         $("#info_section").append(str_html);
+        if (!(flag_articles)) {
+          $(".courses").addClass("large");
+        }
+
+        $(".info-section .a-course .c-techniques .tech").on( "click", function () {
+          class_instance.build_info_section("technique", {"id":$(this).attr("data-id"),"set_dois":class_instance.Q1.index_set[$(this).attr("data-id")]});
+        });
       }
     }
 
@@ -850,8 +879,10 @@ class Layout {
       str_html = str_html + "<div class='tech title'><span class='pre'>Tadirah technique</span>\""+tech_id+"\" </div>";
 
       if(elem["set_dois"].size > 0){
-        str_html = str_html + "<div class='dois-header'>Articles published by institutions adopting this technique</div><div class='dois large'>";
+        str_html = str_html + "<div class='dois-header'>Articles written by institutions adopting this technique</div><div class='dois large'>";
         str_html = str_html + build_html_publication(elem["set_dois"]) + "</div>";
+      }else {
+        str_html = str_html + "<div class='dois-header no-res'>We didn't find any article written by institutions adopting this technique</div><div class='dois large'></div>";
       }
       $("#info_section").append(str_html);
     }
