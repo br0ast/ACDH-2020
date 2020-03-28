@@ -65,9 +65,7 @@ The first steps in this analysis were to fetch relevant data from [Crossref](htt
 
 In order to be able to answer **RQ1** and **RQ2**, we matched each article with its affiliated institution in the DH course registry and generated a new enriched dataset for the DH course registry which also provides the number of DH publications for each institution and the number of collaborations (in terms of co-authored articles) with other institutions of the registry.
 
-For **RQ3**, we matched each technique of the registry with all related articles. In particular, an article is associated with a technique when the technique appears among the article keywords.
-
-The generated datasets are available from [this folder](https://github.com/br0ast/ACDH-2020/tree/master/src/data/res).  
+For **RQ3**, we matched each technique of the registry with all related articles. In particular, an article is associated with a technique when the technique appears among the article keywords.  
 
 <!---
 Check, are we going to create a single script (to be launched once a week) calling any other script?
