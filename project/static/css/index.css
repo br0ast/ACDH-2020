@@ -115,28 +115,190 @@ footer{
   color: #ffffff;
 }
 
-/* Q1 */
-#q1 {
-  margin: 0 auto;
-  margin-top: 30px;
-  width: 70%;
-  height: 300px;
-  border: 1pt solid darkgray;
+.info-section{
+  position: fixed;
+  top: 10%;
+  right: 0;
+  height: 600px;
+  width: 400px;
+  background-color: lightgray;
+  border-radius: 20px 0px 0px 20px;
+  border: solid darkgrey;
+  z-index: 10;
+}
+.info-section .title{
+  padding: 10px;
+  margin-top: 50px;
+  font-size: 17pt;
+  word-wrap: break-word;
 }
 
+.info-section .courses-header{
+  margin: 15px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  font-size: 15pt;
+  border-bottom: solid gray;
+}
+.info-section .courses{
+  padding: 15px;
+  padding-top: 0px;
+  margin-top: 0%;
+  font-size: 11pt;
+  height: 22%;
+  overflow:auto;
+  word-wrap: break-word;
+}
+
+.info-section .a-course {
+  border-bottom: dotted 1pt gray;
+  font-size: 11pt;
+  padding-top: 5px;
+  padding-left: 10px;
+}
+.info-section .a-course .c-title{
+  font-size: 12pt!important;
+  padding-right: 100px;
+}
+.info-section .a-course .c-language{
+  padding: 5px;
+  padding-bottom: 1px;
+}
+.info-section .a-course .c-department{
+  padding: 5px;
+  padding-bottom: 1px;
+}
+.info-section .a-course .c-infourl{
+  padding: 5px;
+  padding-bottom: 1px;
+}
+.info-section .a-course .pre{
+  color: gray;
+}
+.info-section .a-course .c-active{
+  float: right;
+  padding: 10px;
+  margin-right: 25px;
+  border-radius: 20px 20px 20px 20px;
+  border: solid 1pt;
+}
+.info-section .a-course .c-active.active{
+  background-color: lightgreen;
+}
+
+.info-section .dois-header{
+  margin: 15px;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-size: 15pt;
+  border-bottom: solid gray;
+}
+.info-section .dois{
+  padding-left: 25px;
+  padding-top: 0px;
+  font-size: 11pt;
+  max-height: 30%;
+  overflow:auto;
+  word-wrap: break-word;
+}
+.info-section .dois .d-year{
+  margin-top: 20px;
+  font-size: 13pt;
+}
+.info-section .dois .d-title{
+ margin-top: 12px;
+ padding-left: 10px;
+ padding-right: 20px;
+ border-left: gray solid;
+}
+.info-section .dois .d-title a{
+  display: block;
+}
+.info-section .dois.large{
+  max-height: 55%;
+}
+.info-section .title .pre{
+  color: gray;
+  font-size: 15pt;
+  display: block;
+}
+.info-section .title .divider{
+  color: gray;
+  font-size: 14pt;
+}
+
+
+.info-section .del-btn{
+  font-size: 15pt;
+  float: left;
+  padding: 6px;
+  color: white;
+  background-color: #447ab2;
+  border-radius: 17px 0px 5px 0px;
+  opacity: 0.6;
+  border-right: solid 2pt gray;
+  border-bottom: solid 2pt gray;
+}
+.info-section .del-btn:hover{
+  cursor: pointer;
+  opacity: 1;
+}
+
+/* Q1 */
+#q1 {
+  margin-left: 5%;
+  margin-top: 30px;
+  width: 600px;
+  min-height: 900px;
+  border: 1pt solid darkgray;
+  display: inline-block;
+}
+
+#q2 {
+  display: inline-block;
+  margin-left: 20px;
+  width: 50%;
+  min-height: 500px;
+  margin-top: 30px;
+  border: 1pt solid darkgray;
+  vertical-align: top;
+}
 
 /* Q2 */
 #cy {
-  margin: 0 auto;
-  margin-top: 30px;
-  width: 70%;
+  width: 100%;
   height: 500px;
   z-index: 10;
-  border: 1pt solid darkgray;
+}
+#diagram_fit{
+  margin-left: 10px;
+  position:absolute;
+  font-size: 16pt;
+  z-index: 20;
+}
+#fit_btn:hover{
+  cursor: pointer;
 }
 
 /*When the window gets smaller*/
+@media only screen and (max-width: 1400px) {
+  #q1 {
+     display:block;
+     margin: 0 auto;
+     margin-bottom: 20px;
+     margin-top: 20px;
+   }
+   #q2 {
+     display:block;
+     margin: 0 auto;
+     width: 90%;
+   }
+}
 @media only screen and (max-width: 720px) {
+  #q1{
+     left: 0px;
+     margin-top: 20px;
+  }
   #top .inputbox-container{
     width: 90%;
   }
