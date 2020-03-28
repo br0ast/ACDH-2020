@@ -13,7 +13,7 @@ This project sets out to enhance the DH course registry with new data and visual
 
 **RQ3** Which are the techniques most often adopted in published research?
 
-Our aim is to provide additional support for students resorting to the DH course registry to choose the Digital Humanities programme that is right for them. Getting a taste of the type of DH research carried out by the institutions will help users choose the course which best aligns with their objectives and expectations. Someone searching for a PhD programme, for example, could use the extra data to identify the methods or techniques that produce the most published research.
+Our aim is to provide additional support for students resorting to the DH course registry to choose the Digital Humanities programme that is right for them. Getting a taste of the type of DH research carried out by the institutions will help users choose the course which best aligns with their objectives and expectations. Someone searching for a PhD programme, for example, could use the extra data to identify the methods or techniques that produce the most published research or, alternatively, they may be interested in doing pioneering research and be therefore able to identify the techniques which do not yet appear often in digital publications. In addition, thanks to the fact that the tool relates each technique to the articles using it and provides clickable DOIs, potential students may go read the articles to get a better understanding of the techniques.
 
 ### Research methodology
 
