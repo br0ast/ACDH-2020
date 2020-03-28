@@ -1,3 +1,9 @@
+TODO:
+- How to run fix link
+- Check description of viz RQ3
+- Include screenshots?
+
+
 # Choosing the right Digital Humanities programme: an enhanced DH course registry with new data and visualizations
 ## A project for the ACDH-CH Hackathon 2020
 
