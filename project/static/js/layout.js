@@ -211,6 +211,10 @@ class Layout {
         });
       }
 
+      $("header .git").on( "click", function () {
+        window.location.href = "https://github.com/br0ast/ACDH-2020";
+      });
+
       $("#add_btn").on( "click", add_btn_onclick);
     }
 

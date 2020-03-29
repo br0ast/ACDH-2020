@@ -18,14 +18,84 @@ header div{
 header .help{
   float:right;
 }
+header .help:hover{
+  cursor: pointer;
+  color: white;
+  border-bottom: solid 2pt white;
+}
 header .git{
   float:right;
 }
+header .git:hover{
+  cursor: pointer;
+  color: white;
+  border-bottom: solid 2pt white;
+}
+
+header .git a{
+  color: lightgray;
+}
 
 footer{
-  height: 80px;
+  padding-top: 40px;
+  height: fit-content;
   margin-top: 40px;
   background-color: #204051;
+  text-align: center;
+}
+footer .contacts-title{
+  width: 80%;
+  margin: 0 auto;
+  color: lightgray;
+  font-size: 30pt;
+}
+footer .separator{
+  height: 1px;
+  background-color: lightgray;
+  width: 95%;
+  margin: 0 auto;
+}
+footer .other{
+  height: fit-content;
+  margin: 0 auto;
+  width: 95%;
+  color: lightgray;
+  font-size: 12pt;
+}
+footer .acdh-footer{
+  padding-top: 50px;
+  padding-bottom: 30px;
+  text-align: center;
+  opacity: 0.8;
+}
+footer .contacts-title i{
+  font-size: 17pt;
+}
+footer .footer-content{
+  width: 80%;
+  table-layout: fixed ;
+  margin: 0 auto;
+  color: lightgray;
+}
+
+footer .footer-content .contacts-container .a-contact{
+  word-wrap: break-word;
+  padding: 50px;
+}
+footer .footer-content .contacts-container .a-contact div{
+  opacity: 0.8;
+}
+footer a{
+  color: lightgray;
+  text-decoration: underline;
+}
+footer a:hover{
+  color: white;
+}
+footer .footer-content .contacts-container .a-contact .name{
+  opacity: 1;
+  font-size: 16pt;
+  opacity: initial;
 }
 
 #top{
@@ -290,7 +360,7 @@ footer{
 
 /* Q1 */
 #q1_container {
-  margin-left: 5%;
+  margin-left: 8%;
   margin-top: 30px;
   width: 600px;
   min-height: 900px;
@@ -357,6 +427,103 @@ footer{
 #fit_btn:hover{
   cursor: pointer;
 }
+
+
+
+/* Popup box BEGIN */
+.hover_bkgr_fricc{
+    background:rgba(0,0,0,.4);
+    /*cursor:pointer;*/
+    display:none;
+    height:100%;
+    position:fixed;
+    /* text-align:center; */
+    top:0;
+    width:100%;
+    z-index:10000;
+}
+.hover_bkgr_fricc .a-logo{
+  width: 120px;
+}
+.hover_bkgr_fricc .popup-block {
+    cursor: default;
+    background-color: #fff;
+    box-shadow: 10px 10px 60px #555;
+    min-height: 300px;
+    position: relative;
+    border-radius: 8px;
+    padding: 10px;
+    width: fit-content;
+    height: 80%;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+.modal-header{
+  text-align: center;
+  background-color: #f1f3f4;
+  border-bottom: solid gray 2pt;
+
+}
+.modal-header .content{
+  display: inline-block;
+  vertical-align: bottom;
+  width: 60%;
+}
+.modal-header .content p{
+  width: 100%;
+}
+.modal-header .content .a-title{
+  font-size: 25pt;
+}
+
+.modal-body{
+  width: fit-content;
+  height: calc(100% - 200px);
+  overflow:auto;
+}
+.hover_bkgr_fricc .instructions{
+  width: 900px;
+  table-layout: fixed ;
+}
+
+.hover_bkgr_fricc .instructions td{
+ padding: 5px;
+}
+
+.hover_bkgr_fricc .instructions img{
+}
+.hover_bkgr_fricc .instructions .description{
+  padding: 20px;
+  font-size: 14pt
+}
+
+.hover_bkgr_fricc .helper{
+    display:inline-block;
+    height:100%;
+    vertical-align:middle;
+}
+
+.popupCloseButton {
+    background-color: #fff;
+    border: 3px solid #999;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    font-size: 25px;
+    line-height: 30px;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+}
+.popupCloseButton:hover {
+    background-color: #ccc;
+}
+
+/* Popup box BEGIN */
+
+
 
 /*When the window gets smaller*/
 @media only screen and (max-width: 1400px) {
