@@ -85,7 +85,7 @@ For **RQ1** and **RQ2**, we realized a network graph where nodes represent insti
 Figure 1
 -->
 
-For **RQ3**, we generated a bar chart which allows a comparison between the techniques of the DH courses offered at two  different institutions (Figure 2). Each bar represents a technique taught in one of the courses selected. If a technique is taught in both courses, the bar is coloured in orange, whereas if the technique is taught only in one of the two courses the bar is either red (for one of the two courses) or yellow (for the other). The higher the bar, the higher the number of published research that employs the technique. By clicking on a bar, the number of relevant articles appears alongside with the list of clickable article DOIs.   
+For **RQ3**, we generated a bar chart which allows a comparison between the techniques of the DH courses offered at two  different institutions (Figure 2). Each bar represents a technique taught in one of the courses selected. If a technique is taught in both courses, the bar is coloured in orange, whereas if the technique is taught only in one of the two courses the bar is either red (for one of the two courses) or yellow (for the other). The longer the bar, the higher the number of published research that employs the technique. By clicking on a bar, the number of relevant articles appears alongside with the list of clickable article DOIs.   
 
 <!---
 Figure 2
