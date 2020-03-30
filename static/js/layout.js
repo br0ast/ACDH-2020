@@ -879,7 +879,7 @@ class Layout {
       str_html = str_html + "<div class='tech title'><span class='pre'>Tadirah technique</span>\""+tech_id+"\" </div>";
 
       if(elem["set_dois"].size > 0){
-        str_html = str_html + "<div class='dois-header'>Articles written by institutions adopting this technique</div><div class='dois large'>";
+        str_html = str_html + "<div class='dois-header'>Articles that adopts this technique</div><div class='dois large'>";
         str_html = str_html + build_html_publication(elem["set_dois"]) + "</div>";
       }else {
         str_html = str_html + "<div class='dois-header no-res'>We didn't find any article that adopts this technique</div><div class='dois large'></div>";
