@@ -882,7 +882,7 @@ class Layout {
         str_html = str_html + "<div class='dois-header'>Articles written by institutions adopting this technique</div><div class='dois large'>";
         str_html = str_html + build_html_publication(elem["set_dois"]) + "</div>";
       }else {
-        str_html = str_html + "<div class='dois-header no-res'>We didn't find any article written by institutions adopting this technique</div><div class='dois large'></div>";
+        str_html = str_html + "<div class='dois-header no-res'>We didn't find any article that adopts this technique</div><div class='dois large'></div>";
       }
       $("#info_section").append(str_html);
     }
