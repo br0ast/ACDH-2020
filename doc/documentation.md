@@ -73,9 +73,15 @@ The scripts used to generate the enriched dataset are available [here](https://g
 
 In order to show the new statistics for each DH course in the registry, we propose two different visualizations. 
 
-For **RQ1** and **RQ2**, we realized a network graph where nodes represent institutions while edges represent collaborations between institutions. When selecting a DH course from the registry, at the centre users see a partial network graph featuring the node of the institution offering the course, accompanied by all institutions with which at least one collaboration was established. The thicker the edge, the higher the number of collaborations between the two institutions. By clicking on a node, the number of articles affiliated to the institutions appears in a pop-up tab alongside with the list of clickable article DOIs. Similarly, by clicking on an edge, the number of co-authored articles appears alongside with the list of clickable article DOIs. The tab also contains a list of the courses offered by the institutions with some additional information.
+For **RQ1** and **RQ2**, we realized a network graph where nodes represent institutions while edges represent collaborations between institutions (Figure 1). When selecting a DH course from the registry, at the centre users see a partial network graph featuring the node of the institution offering the course, accompanied by all institutions with which at least one collaboration was established. The thicker the edge, the higher the number of collaborations between the two institutions. By clicking on a node, the number of articles affiliated to the institutions appears in a pop-up tab alongside with the list of clickable article DOIs. Similarly, by clicking on an edge, the number of co-authored articles appears alongside with the list of clickable article DOIs. The tab also contains a list of the courses offered by the institutions with some additional information.
 
-For **RQ3**, we generated a bar chart which allows a comparison between the techniques of the DH courses offered at two  different institutions. Each bar represents a technique taught in one of the courses selected. If a technique is taught in both courses, the bar is coloured in orange, whereas if the technique is taught only in one of the two courses the bar is either red (for one of the two courses) or yellow (for the other). The longer the bar, the higher the number of published research that employs the technique. By clicking on a bar, the number of relevant articles appears alongside with the list of clickable article DOIs.   
+For **RQ3**, we generated a bar chart which allows a comparison between the techniques of the DH courses (Figure 2) offered at two  different institutions. Each bar represents a technique taught in one of the courses selected. If a technique is taught in both courses, the bar is coloured in orange, whereas if the technique is taught only in one of the two courses the bar is either red (for one of the two courses) or yellow (for the other). The longer the bar, the higher the number of published research that employs the technique. By clicking on a bar, the number of relevant articles appears alongside with the list of clickable article DOIs.
+
+**Figure 1**
+![](https://github.com/br0ast/ACDH-2020/blob/master/img/doc_1.png)
+
+**Figure 2**
+![](https://github.com/br0ast/ACDH-2020/blob/master/img/doc_2.png)
 
 ### How to run the tool
 
