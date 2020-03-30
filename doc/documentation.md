@@ -67,7 +67,7 @@ In order to be able to answer **RQ1** and **RQ2**, we matched each article with 
 
 For **RQ3**, we matched each technique of the registry with all related articles. In particular, an article is associated with a technique when the technique appears among the article keywords.  
 
-The script used to generate the enriched dataset is available [here](https://github.com/br0ast/ACDH-2020/tree/master/src/script). Ideally, this script is meant to be run at least once a month so to maintain the DH course registry up-to-date with new DH publications. The last updated date and time will be displayed to ensure users are aware of the data freshness.
+The scripts used to generate the enriched dataset are available [here](https://github.com/br0ast/ACDH-2020/tree/master/src/script). Ideally, these scripts are meant to be run at least once a month so to maintain the DH course registry up-to-date with new DH publications. The last updated date was 30/03/2020 (dd/mm/yyyy).
 
 ### Research outcome
 
