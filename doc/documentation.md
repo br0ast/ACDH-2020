@@ -93,3 +93,6 @@ In addition, the project could be developed further by:
 
 Spinaci, Gianmarco, Colavizza, Giovanni, & Peroni, Silvio. (2019). List of Digital Humanities journals (Version 0.1.0) [Dataset]. Zenodo. http://doi.org/10.5281/zenodo.3406564
 
+Spinaci, Gianmarco, Colavizza, Giovanni, & Peroni, Silvio. (2019). "Preliminary Results on Mapping Digital Humanities Research". [Conference paper]. https://aiucd2020.unicatt.it/aiucd-Spinaci_et_al.pdf 
+
+
