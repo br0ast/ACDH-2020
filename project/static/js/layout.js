@@ -81,7 +81,7 @@ class Layout {
 
                                       $.ajax({
                                               type: "GET",
-                                              url: class_instance.acdh_data_url+"res/affiliation.json",
+                                              url: class_instance.acdh_data_url+"res/affiliation.json"+"?time="+(new Date().getTime()).toString(),
                                               dataType: "json",
                                               async: true,
                                               success: function(d3) {
@@ -95,7 +95,7 @@ class Layout {
                                                     }
                                                   }
                                                 }
-                                                console.log(class_instance.DATA);
+                                                //console.log(class_instance.DATA);
                                                 set_interface();
                                                 set_views();
                                               }
@@ -210,10 +210,6 @@ class Layout {
           class_instance.update_q2("view", {ids: added_ids, combined: combined, colors: added_colors});
         });
       }
-
-      $("header .git").on( "click", function () {
-        window.location.href = "https://github.com/br0ast/ACDH-2020";
-      });
 
       $("#add_btn").on( "click", add_btn_onclick);
     }
@@ -338,7 +334,7 @@ class Layout {
         function init_q2(){
           $.ajax({
                   type: "GET",
-                  url: class_instance.acdh_data_url+"res/affiliation.json",
+                  url: class_instance.acdh_data_url+"res/affiliation.json"+"?time="+(new Date().getTime()).toString(),
                   dataType: "json",
                   async: true,
                   success: function(data) {
@@ -452,8 +448,8 @@ class Layout {
     class_instance.Q1.barchart_data.x = Object.values(barchart_techniques);
     class_instance.Q1.barchart_data.highlighted = JSON.parse(JSON.stringify(items));
 
-    console.log("Bar chart data are:");
-    console.log(class_instance.Q1.index_set, class_instance.Q1.barchart_data);
+    //console.log("Bar chart data are:");
+    //console.log(class_instance.Q1.index_set, class_instance.Q1.barchart_data);
 
     //build the bar chart
     build_barchart();
@@ -592,7 +588,7 @@ class Layout {
               }
             }
        }
-       console.log(this.Q2.index_set);
+       //console.log(this.Q2.index_set);
 
        this.update_cy(items);
     }
@@ -754,7 +750,7 @@ class Layout {
           str_html = str_html + "<div class='node title'><span class='pre'>Institution</span><span>"+inst_obj["name"]+"</span>";
           //str_html = str_html + "<div class='node title'><span>"+inst_obj["name"]+"</span>";
           var courses_ids = Object.keys(inst_obj["course"]);
-          console.log(courses_ids.length);
+          //console.log(courses_ids.length);
           if (courses_ids.length > 0) {
             flag_courses = true;
             var a_course = inst_obj["course"][courses_ids[0]]

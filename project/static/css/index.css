@@ -359,8 +359,13 @@ footer .footer-content .contacts-container .a-contact .name{
 }
 
 /* Q1 */
+#q_containers{
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin: 0 auto;
+}
 #q1_container {
-  margin-left: 8%;
   margin-top: 30px;
   width: 600px;
   min-height: 900px;
@@ -375,7 +380,7 @@ footer .footer-content .contacts-container .a-contact .name{
 }
 #q2_container {
   display: inline-block;
-  width: 50%;
+  width: calc(100% - 630px);
   min-height: 500px;
   margin-top: 30px;
   margin-left: 20px;
@@ -453,7 +458,7 @@ footer .footer-content .contacts-container .a-contact .name{
     position: relative;
     border-radius: 8px;
     padding: 10px;
-    width: fit-content;
+    width: 67%;
     height: 80%;
     margin: 0 auto;
     margin-top: 100px;
@@ -477,12 +482,12 @@ footer .footer-content .contacts-container .a-contact .name{
 }
 
 .modal-body{
-  width: fit-content;
+  width: 100%;
   height: calc(100% - 200px);
   overflow:auto;
 }
 .hover_bkgr_fricc .instructions{
-  width: 900px;
+  width: 100%;
   table-layout: fixed ;
 }
 
@@ -535,7 +540,7 @@ footer .footer-content .contacts-container .a-contact .name{
    }
    #q2_container {
      display: block;
-     width: 600px;
+     width: 100%;
      margin: 0 auto;
      margin-top: 20px;
    }

@@ -34,7 +34,7 @@
                 <span class="content">
                   <p class="a-title-l">ACDH-CH OPEN DATA VIRTUAL HACKATHON 2020</p>
                   <p class="a-title">An introduction and a usage instructions of the interface</p>
-                  <p><a href="https://github.com/br0ast/ACDH-2020"><i class="fa fa-github fa-1x" aria-hidden="true"></i>&nbsp;Visit the GitHub repository</a></p>
+                  <p><a class="a-git-link"><i class="fa fa-github fa-1x" aria-hidden="true"></i>&nbsp;Visit the GitHub repository</a></p>
                 </span>
 
               </div>
@@ -45,14 +45,14 @@
 
                   <tr>
                     <td class="description">
-                      <p>The aim of this visualisation is to investigate into the techniques and the collaborations between the institutions working on the digital humanities study field considering the academic publishing world. Here we mention the main characteristics of the developed interface, along with the permitted operations. For any further information, please read our <a href="https://github.com/br0ast/ACDH-2020">full documentation</a>.</p>
+                      <p>The aim of this visualisation is to investigate the techniques taught by the different DH courses and the collaborations in terms of academic publications between institutions within the field of Digital Humanities. This guide mentions only the main characteristics of the developed interface along with the permitted operations. For any further information, please read our <a class="a-documentation-link">full documentation.</a>.</p>
                     </td>
                     <td><img src="img/0.png" width="100%"></td>
                   </tr>
 
                   <tr>
                     <td class="description">
-                      <p>The visualisation is divided in two main view: (a) a <span class="barchart-style">bar chart</span>, and (b) a <span class="netgraph-style">network graph</span>. When starting the visualisation both the views include all the institutions and their available data. The search bar lets you look for a specific institution. By clicking on "add it" the graph network will update and display only the selected Institution and its adjacent nodes. At the same time, the bar chart will highlight the techniques taught/adopted by the selected institution using the same color of the institution. This visualisation allows to add up to 2 institutions. If two institutions share the same technique then a "both" color will appear as well and on and the bar chart will update accordingly  and highlight the shared techniques.</p>
+                      <p>The visualisation is divided in two main views: (a) a <span class="barchart-style">bar chart</span>, and (b) a <span class="netgraph-style">network graph</span>. When starting the visualisation both the views include all the institutions and their available data. The search bar lets you look for a specific institution. By clicking on "add it" the graph network will update and display only the selected Institution and its adjacent nodes. At the same time, the bar chart will highlight the techniques taught/adopted by the selected institution using the same color of the institution. This visualisation allows to add up to 2 institutions. If two institutions share the same technique then a "both" color will appear as well and on and the bar chart will update accordingly  and highlight the shared techniques.</p>
                     </td>
                     <td><img src="img/1.png" width="100%"><img src="img/2.png" width="100%"></td>
                   </tr>
@@ -85,20 +85,22 @@
   <div id="filters">
   </div>
 
-  <div id="q1_container">
-    <div id="q1_info" class="q-part">
-        How much do the articles published in Digital Humanities domain use techniques adopted/teached in the Digital Humanities Institutions and courses?
+  <div id="q_containers">
+    <div id="q1_container">
+      <div id="q1_info" class="q-part">
+          Which are the techniques most often adopted in DH published research?
+      </div>
+      <div id="q1">
+      </div>
     </div>
-    <div id="q1">
-    </div>
-  </div>
 
-  <div id="q2_container">
-    <div id="q2_info" class="q-part">
-          How the Digital Humanities institutions collaborate with each other?
-    </div>
-    <div id="q2">
-        <div id="cy"></div>
+    <div id="q2_container">
+      <div id="q2_info" class="q-part">
+            How many Digital Humanities articles are affiliated to the institutions of the registry? Are there any collaborations, i.e. co-authored DH articles, between the institutions?
+      </div>
+      <div id="q2">
+          <div id="cy"></div>
+      </div>
     </div>
   </div>
 
@@ -145,33 +147,36 @@
 	<!--<script src="static/cytoscape/cytoscape.min.js"></script>-->
   <script src="https://unpkg.com/webcola/WebCola/cola.min.js"></script>
   <script src="static/cytoscape/dist/cytoscape-cola.js"></script>
-
   <!-- Plotly -->
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-
+  <!-- Jquery -->
   <script src="static/js/jquery.min.js"></script>
+  <!-- Cytoscape -->
   <script src="static/js/layout.js"></script>
 
   <script>
-    var layout = new Layout("main_input", "https://ivanhb.github.io/data/src/acdh2020/");
+    //******************************************//
+    //********** The main Interface **************//
+    //******************************************//
+    var ACDH_DATA_PATH = "https://ivanhb.github.io/data/src/acdh2020/";
+    var GIT_URL = "https://github.com/br0ast/ACDH-2020";
+    var DOC_LINK = "https://github.com/br0ast/ACDH-2020";
+
+    $("header .git").on( "click", function () {window.location.href = GIT_URL;});
+    $(".a-git-link").attr("href", GIT_URL);
+    $(".a-documentation-link").attr("href", DOC_LINK);
+
+    var layout = new Layout("main_input", ACDH_DATA_PATH);
     layout.init_interface();
 
     //******************************************//
     //********** POP Up Help **************//
     //******************************************//
-
-    $(".trigger_popup_fricc").click(function(){
-           $('.hover_bkgr_fricc').show();
-    });
-    /*
-    $('.hover_bkgr_fricc').click(function(){
-            $('.hover_bkgr_fricc').hide();
-    });
-    */
-    $('.popupCloseButton').click(function(){
-            $('.hover_bkgr_fricc').hide();
-    });
+    $(".trigger_popup_fricc").click(function(){ $('.hover_bkgr_fricc').show();});
+    /* $('.hover_bkgr_fricc').click(function(){$('.hover_bkgr_fricc').hide();}); */
+    $('.popupCloseButton').click(function(){$('.hover_bkgr_fricc').hide();});
     $('.hover_bkgr_fricc').show();
+
   </script>
 
 </body>
