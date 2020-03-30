@@ -93,7 +93,7 @@ Figure 2
 
 ### How to run the tool
 
-The visualization, built using two Javascript libraries, [Plotly](https://plotly.com/javascript/) and [Cytoscape](https://cytoscape.org/), can be accessed via a standard web browser through [this link](https://github.com/br0ast/ACDH-2020/blob/master/project/index.html). For further information on how to reproduce the datasets developed in this study please refer directly to the scripts [in this folder](https://github.com/br0ast/ACDH-2020/tree/master/src/script), which are commented step by step.
+The visualization, built using two Javascript libraries, [Plotly](https://plotly.com/javascript/) and [Cytoscape](https://cytoscape.org/), can be accessed via a standard web browser through [this link](https://br0ast.github.io/ACDH-2020/). For further information on how to reproduce the datasets developed in this study please refer directly to the scripts [in this folder](https://github.com/br0ast/ACDH-2020/tree/master/src/script), which are commented step by step.
 	
 ### Limitations and suggestions for future work
 
