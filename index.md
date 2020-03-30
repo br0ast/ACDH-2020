@@ -160,7 +160,7 @@
     //******************************************//
     var ACDH_DATA_PATH = "https://ivanhb.github.io/data/src/acdh2020/";
     var GIT_URL = "https://github.com/br0ast/ACDH-2020";
-    var DOC_LINK = "https://github.com/br0ast/ACDH-2020";
+    var DOC_LINK = "https://github.com/br0ast/ACDH-2020/blob/master/doc/documentation.md";
 
     $("header .git").on( "click", function () {window.location.href = GIT_URL;});
     $(".a-git-link").attr("href", GIT_URL);
